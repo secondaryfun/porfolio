@@ -1,3 +1,6 @@
+.nav-wrapper {
+    margin: 0 4rem;
+}
 .nav__link {
     font-size: 3.6rem;
     font-weight: 700;
