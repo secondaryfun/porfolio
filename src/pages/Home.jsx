@@ -12,9 +12,9 @@ import NavBar from "../components/NavBar"
 
 function Home() {
     return (
-        <body>
+        <div className="full-screen home-wrapper page-wrapper">
             <NavBar />
-        </body>
+        </div>
     );
 }
 

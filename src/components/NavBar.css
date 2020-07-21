@@ -1,9 +1,31 @@
-.nav-wrapper {
-    background-image: url('../assets/images/backgrounds/horizon-intro-yellow.svg');
-    height: 100vh;
-    width: 100%;
+.nav__link {
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
 }
 
-.nav-link {
-    text-decoration: none;
+.nav__logo-name {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width : 480px) {
+    .nav__logo-name {width: 25rem;}
+    .nav__link { margin-top: 4rem; }
+    .nav__logo-name { margin-top: 2rem; }
+    .nav__link { 
+        font-size: 2.8rem; 
+        margin-right: 3.5rem;
+    }
+}
+
+@media screen and (min-width : 1224px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width : 1600px) {
+    html {
+        font-size: 12px;
+    }
 }

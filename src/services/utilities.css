@@ -1,0 +1,24 @@
+/* Text Utilities */
+.open-sans {  font-family: 'Open Sans', sans-serif;}
+.oswald {    font-family: 'Oswald', sans-serif;}
+.center {    text-align: center;}
+.left {    text-align: left;}
+/* LAYOUT */
+.responsive-flex-row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+.full-screen {
+    height: 100vh;
+    width: 100%;
+}
+/* BACKGROUNDS */
+.page-wrapper {    background-size: cover;}
+/* MARGINS */
+
+@media screen and (min-width : 480px) {
+    .responsive-flex-row {
+        flex-flow: row nowrap;
+    }
+}
