@@ -14,15 +14,13 @@ background: -webkit-linear-gradient(180deg, rgba(253,219,24,1) 25%, rgba(255,255
 background: linear-gradient(180deg, rgba(253,219,24,1) 25%, rgba(255,255,255,1) 63%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endColorstr="#ffffff",GradientType=1);
 }
-.recent-work__heading-wrapper {
-
-}
 .mid-page_home__title {
+    margin: 0 auto;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
     color: #fff3f3;
     font-family: "Open Sans";
     font-weight: 700;
-    letter-spacing: -.9rem;
+    letter-spacing: -.7rem;
     line-height: 8rem;
     font-size: 8rem;
 
@@ -32,6 +30,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endCo
     .mid-page_home__title {
         font-size: 12rem;
         line-height: 10rem;
+        width: 60%;
     }
 }
 @media screen and (min-width : 1200px) {

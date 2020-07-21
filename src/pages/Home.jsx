@@ -12,6 +12,8 @@ import NavBarSmall from "../components/NavBarSmall.jsx"
 import ArrowButton from "../components/ArrowButton.jsx"
 
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
+import onlineShopping from "../assets/images/characters/Online shopping-bro-purple.svg"
+import coding from "../assets/images/characters/Coding-bro-purple.svg"
 import downArrow from "../assets/images/icons/arrow-head-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
@@ -48,11 +50,13 @@ function Home() {
                 </p>
                 </div>
                 <div className="mid-page_home grid-1x1" id="recent-work">
-                    <div className="grid-center grid-position-1 recent-work__heading-wrapper">
+                    <div className="grid-center grid-position-1 z-index-top recent-work__heading-wrapper">
                         <h1 className="mid-page_home__title">Recent Work</h1>
                         <ArrowButton title="VIEW ALL WORK" />
                     </div>
-                    <img src={triangle} className="split-page-img grid-stretch grid-position-1"></img>
+                    <img src={triangle} className="split-page-img grid-stretch grid-position-1 z-index-mid"></img>
+                    <img src={coding} className="vignette--small grid-end grid-position-1 margin-3"></img>
+                    <img src={onlineShopping} className="vignette--small grid-position-1 z-index-top margin-3 hide-on-small"></img>
                 </div>
                 <div className="page-runout--yellow page-runout" id="recent-work">
                 </div>

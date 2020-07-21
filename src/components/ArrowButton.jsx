@@ -6,8 +6,8 @@ import arrow from "../assets/images/icons/arrow-button.svg"
 function ArrowButton(props) {
 
     return (
-        <div className="ArrowButton-wrapper">
-            <div className="ArrowButton__title">props.title</div>
+        <div className="ArrowButton-wrapper flex-row">
+            <div className="ArrowButton__title">{props.title}</div>
             <img src={arrow} alt="arrow" className="ArrowButton-arrow" />
         </div>
     );
