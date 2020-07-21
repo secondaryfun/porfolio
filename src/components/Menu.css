@@ -1,0 +1,27 @@
+.menu-wrapper_open {
+    background: white;
+    align-content: center;
+    padding: 3rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1vh 2.5vw;
+    height: 98vh;
+    width: 90vw;
+}
+.menu__link {
+    font-size: 3rem;
+    letter-spacing: .3rem;
+}
+.menu__link:hover  {
+    background: blue;
+    color: #FFF3F3;
+    border-radius: .5rem;
+}
+
+@media screen and (min-width : 480px) {
+    .menu-wrapper_open {
+        height: auto;
+        width: 30%;
+    }
+}

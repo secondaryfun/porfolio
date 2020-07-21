@@ -1,0 +1,10 @@
+.social-media_link {
+    height: 4rem;
+    width: 4rem;
+    display: block;
+    padding: 1rem;
+}
+.social-media_link:hover  {
+    background: rgba(0, 0, 255, 0.6);
+    border-radius: .5rem;
+}

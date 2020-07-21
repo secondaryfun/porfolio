@@ -1,10 +1,15 @@
 .nav-wrapper {
-    margin: 0 4rem;
+    margin: 0 1rem;
+    padding-top: 2rem;
+}
+.nav-wrapper--small  {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 .nav__link {
     font-size: 3.6rem;
     font-weight: 700;
-    text-align: center;
 }
 
 .nav__logo-name {
@@ -14,11 +19,16 @@
 
 @media screen and (min-width : 480px) {
     .nav__logo-name {width: 25rem;}
-    .nav__link { margin-top: 4rem; }
     .nav__logo-name { margin-top: 2rem; }
-    .nav__link { 
-        font-size: 2.8rem; 
-        margin-right: 3.5rem;
+    .nav-bar-margins { 
+        margin-top: 4rem;
+    }
+    .nav__link {
+        font-size: 2.8rem;
+        margin-right: 2rem;
+    }
+    .nav-wrapper {
+        margin: 0 4rem;
     }
 }
 
