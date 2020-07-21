@@ -1,6 +1,7 @@
 .nav-wrapper {
     margin: 0 1rem;
     padding-top: 2rem;
+    z-index: 100;
 }
 .nav-wrapper--small  {
     position: -webkit-sticky;

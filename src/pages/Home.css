@@ -4,3 +4,39 @@
 .mid-page_home {
     background: #fccc05;
 }
+.yellow--dark {
+    background: #fccc05;
+}
+.page-runout--yellow {
+    background: rgb(253,219,24);
+background: -moz-linear-gradient(180deg, rgba(253,219,24,1) 25%, rgba(255,255,255,1) 63%);
+background: -webkit-linear-gradient(180deg, rgba(253,219,24,1) 25%, rgba(255,255,255,1) 63%);
+background: linear-gradient(180deg, rgba(253,219,24,1) 25%, rgba(255,255,255,1) 63%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endColorstr="#ffffff",GradientType=1);
+}
+.recent-work__heading-wrapper {
+
+}
+.mid-page_home__title {
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    color: #fff3f3;
+    font-family: "Open Sans";
+    font-weight: 700;
+    letter-spacing: -.9rem;
+    line-height: 8rem;
+    font-size: 8rem;
+
+}
+
+@media screen and (min-width : 480px) {
+    .mid-page_home__title {
+        font-size: 12rem;
+        line-height: 10rem;
+    }
+}
+@media screen and (min-width : 1200px) {
+    .mid-page_home__title {
+        font-size: 18rem;
+        line-height: 15rem;
+    }
+}
