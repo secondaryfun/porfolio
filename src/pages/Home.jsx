@@ -48,11 +48,11 @@ function Home() {
                 </p>
                 </div>
                 <div className="mid-page_home grid-1x1" id="recent-work">
-                    <div className="grid-center recent-work__heading-wrapper">
+                    <div className="grid-center grid-position-1 recent-work__heading-wrapper">
                         <h1 className="mid-page_home__title">Recent Work</h1>
                         <ArrowButton title="VIEW ALL WORK" />
                     </div>
-                    <img src={triangle} className="split-page-img grid-stretch"></img>
+                    <img src={triangle} className="split-page-img grid-stretch grid-position-1"></img>
                 </div>
                 <div className="page-runout--yellow page-runout" id="recent-work">
                 </div>
