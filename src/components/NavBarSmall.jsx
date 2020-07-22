@@ -12,10 +12,10 @@ function NavBarSmall(props) {
     return (
         <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${passInClass}`}>
             <Link className="nav__link " to='#top'>
-                <img alt="" src={logo} alt="Home Screen" className="nav__logo" />
+                <img src={logo} alt="Home Screen" className="nav__logo" />
             </Link>
             <Link className="nav__link hide-on-small" to='#top'>
-                <img alt="" src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
+                <img src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
             </Link>
             <Menu />
         </nav>
