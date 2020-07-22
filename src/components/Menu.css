@@ -8,6 +8,7 @@
     margin: 1vh 2.5vw;
     height: 98vh;
     width: 90vw;
+    z-index: 100;
 }
 .menu__link {
     font-size: 3rem;
@@ -17,11 +18,12 @@
     background: blue;
     color: #FFF3F3;
     border-radius: .5rem;
+    cursor: pointer;
 }
 
 @media screen and (min-width : 480px) {
     .menu-wrapper_open {
         height: auto;
-        width: 30%;
+        width: 90vw;
     }
 }

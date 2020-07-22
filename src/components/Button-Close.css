@@ -1,6 +1,7 @@
 .close-button_wrapper {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 4rem;
+    width: 4rem;
+    padding: 1rem;
     align-self: flex-end;
     margin-bottom: 3rem;
 }

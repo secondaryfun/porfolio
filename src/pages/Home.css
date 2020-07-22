@@ -25,6 +25,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endCo
     font-size: 8rem;
 
 }
+.vignette--home {
+    position: relative;
+    bottom: 12rem;
+    z-index: 101;
+}
 
 @media screen and (min-width : 480px) {
     .mid-page_home__title {

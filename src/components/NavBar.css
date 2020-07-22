@@ -6,7 +6,7 @@
 .nav-wrapper--small  {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: -1px;
 }
 .nav__link {
     font-size: 3.6rem;

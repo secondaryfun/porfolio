@@ -1,0 +1,30 @@
+.Preview-wrapper {
+    background: rgba(0,0,0,.75);
+    height: 20rem;
+    width: 20rem;
+    color: #FFF3F3;
+}
+.Preview-wrapper h2, .Preview-wrapper > a {
+    color: #FFF3F3;
+}
+.Preview-wrapper h2 {
+    font-size: 3rem;
+}
+.Preview-wrapper > a:hover {
+    font-weight: 700;
+}
+@media screen and (min-width : 950px) {
+    .Preview-wrapper {
+        height: 30rem;
+        width: 30rem;
+    }
+}
+@media screen and (min-width : 1200px) {
+    .page-center {
+        top: 60rem;
+    }
+    .vignette--small {
+        height: 30rem;
+        width: 30rem;
+    }
+}

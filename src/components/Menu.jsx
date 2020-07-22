@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 import './Menu.css';
@@ -7,18 +8,26 @@ import MenuButton from './Button-Menu.jsx'
 import SocialMedia from './SocialMedia.jsx'
 
 
-import arrowUp from "../assets/images/icons/arrow-up-black.svg"
+import contact from "../assets/images/characters/Get-in-touch-bro-green.svg"
+
 
 function Menu(props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+    useEffect(() => props.history.listen(() => {
+        setIsMenuOpen(false);
+    }))
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
+        console.log("clicked")
     }
 
     return (
         <div className="menu-wrapper">
-            <MenuButton handleClick={toggleMenu} />
+            {props.img ? <div onClick={toggleMenu} className="pointer">
+                <img src={contact} className="vignette--small grid-bottom margin-3 hide-on-mobile"></img>
+            </div>
+                : <MenuButton handleClick={toggleMenu} />}
+
             {!isMenuOpen ? "" : (
                 <header className="menu-wrapper_open flex-column ">
                     <CloseButton handleClick={toggleMenu} />
@@ -36,4 +45,4 @@ function Menu(props) {
     );
 }
 
-export default Menu;
+export default withRouter(Menu);

@@ -4,7 +4,9 @@
     display: block;
     padding: 1rem;
 }
-.social-media_link:hover  {
-    background: rgba(0, 0, 255, 0.6);
-    border-radius: .5rem;
+.social-media_link--large {
+    height: 6rem;
+    width: 6rem;
+    border: #212121 solid 2px;
+    border-radius: 5px;
 }

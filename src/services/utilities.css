@@ -55,16 +55,16 @@ font-weight: 400;
     align-self: center;
     justify-self: center;
 }
-.grid-stretch {
-    align-self: flex-end; 
-    /* justify-self: stretch; */
-}
 .grid-end {
     align-self: flex-end;
     justify-self: flex-end;
 }
+.grid-bottom {
+    align-self: flex-end;
+    justify-self: center;
+}
 .z-index-top {
-    z-index: 100;
+    z-index: 99;
 }
 .z-index-mid {
     z-index: 50;
@@ -91,10 +91,20 @@ font-weight: 400;
     height: 100%;
     width: 100%;
 }
+.auto-size {
+    height: auto;
+    width: auto;
+}
+.margin-1 {
+    margin: 1rem;
+}
 .margin-3 {
     margin: 3rem;
 }
-/* BACKGROUNDS & IMAGES */
+.margin-5 {
+    margin: 5rem;
+}
+/* BACKGROUNDS */
 .page-wrapper { 
     background-size: cover;
 }
@@ -107,10 +117,8 @@ font-weight: 400;
     width: 100%;
     height: 75vh;
 }
-.vignette--small {
-    height: 30rem;
-    width: 30rem;
-}
+.overflow-x {overflow-x: hidden}
+
 /* MARGINS */
 
 /* IMAGES */
@@ -120,9 +128,24 @@ font-weight: 400;
 .vignette {
     width: 100%;
 }
-.hide-on-small {
-    position: relative;
+.vignette--small {
+    height: 30rem;
+    width: 30rem;
+}
+.hide-on-small, .hide-on-mobile {
+    position: absolute;
     right: 100vw;
+}
+.pointer:hover {
+    cursor: pointer;
+}
+.blue-on-hover:hover  {
+    border-radius: .5rem;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(24,55,253,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(24,55,253,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(24,55,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1837fd",GradientType=1);
 }
 
 @media screen and (min-width : 480px) {
@@ -136,19 +159,30 @@ font-weight: 400;
         position: relative;
         top: 4rem;
     }
+    .vignette--small {
+        height: 15rem;
+        width: 15rem;
+    }
     .mid-page {
         height: auto;
         width: 100%;
         padding: 4rem 2rem;
     }
     .page-center {
-        width: 50%;
-        height: 60%;
         margin: 0 auto;
-        top: 60rem;
     }
     .mid-page-callout { font-size: 5rem;}
-
+    .vignette--small {
+        height: 18rem;
+        width: 18rem;
+    }
+    .hide-on-mobile {
+        position: relative;
+        right: 0;
+    }
+    .only-mobile {
+        display: none;
+    }
 }
 @media screen and (min-width : 950px) {
     .hide-on-small {
@@ -158,9 +192,17 @@ font-weight: 400;
     .hide-on-large {
         display: none;
     }
+    .vignette--small {
+        height: 25rem;
+        width: 25rem;
+    }
 }
 @media screen and (min-width : 1200px) {
     .page-center {
         top: 60rem;
+    }
+    .vignette--small {
+        height: 30rem;
+        width: 30rem;
     }
 }
