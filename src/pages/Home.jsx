@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-} from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import './Home.css';
@@ -60,10 +55,10 @@ function Home() {
                         <h1 className="mid-page_home__title">Recent Work</h1>
                         <ArrowButton title="VIEW ALL WORK" />
                     </div>
-                    <img src={triangle} className="split-page-img grid-position-1 grid-end z-index-mid"></img>
-                    <img src={onlineShopping} className="vignette--small 
+                    <img alt="" src={triangle} className="split-page-img grid-position-1 grid-end z-index-mid"></img>
+                    <img alt="" src={onlineShopping} className="vignette--small 
                     grid-position-1 z-index-top margin-3 hide-on-mobile"></img>
-                    <img src={coding} className="vignette--small 
+                    <img alt="" src={coding} className="vignette--small 
                     grid-position-1 grid-end margin-3 hide-on-mobile "></img>
                     <Preview title="Checkers" link="/checkers"
                         className={"grid-position-1 z-index-top grid-end margin-3 hide-on-mobile"}
@@ -73,7 +68,7 @@ function Home() {
                     />
                 </div>
                 <div className="page-runout--yellow page-runout grid-1x1" id="recent-work">
-                    <img src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img>
+                    <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img>
                     <Menu img={true} />
                     <footer className="flex-row margin-5">
                         <p>Red Cap Concepts | Washington DC | 2020</p>

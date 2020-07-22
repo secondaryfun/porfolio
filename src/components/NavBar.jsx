@@ -11,7 +11,7 @@ function NavBar() {
 
     return (
         <nav className="nav-wrapper flex-row hide-on-small">
-            <img src={logoName} alt="Christopher Birkenhagen" className="nav__logo-name" />
+            <img alt="" src={logoName} alt="Christopher Birkenhagen" className="nav__logo-name" />
             <div className="nav__link-wrapper nav-bar-margins flex-row hide-on-small">
                 <Link className="nav__link " to="/" >HOME</Link>
                 <Link className="nav__link " to="/skills" >SKILLS</Link>

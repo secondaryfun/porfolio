@@ -6,7 +6,7 @@ import menuIcon from "../assets/images/icons/menu-icon.svg"
 function MenuButton(props) {
     return (
         <div className="menu-button_wrapper" onClick={props.handleClick} >
-            <img src={menuIcon} className="max-size" />
+            <img alt="" src={menuIcon} className="max-size" />
         </div>
     );
 }

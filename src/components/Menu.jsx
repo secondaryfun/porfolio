@@ -24,7 +24,7 @@ function Menu(props) {
     return (
         <div className="menu-wrapper">
             {props.img ? <div onClick={toggleMenu} className="pointer">
-                <img src={contact} className="vignette--small grid-bottom margin-3 hide-on-mobile"></img>
+                <img alt="" src={contact} className="vignette--small grid-bottom margin-3 hide-on-mobile"></img>
             </div>
                 : <MenuButton handleClick={toggleMenu} />}
 

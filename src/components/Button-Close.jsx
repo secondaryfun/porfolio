@@ -6,7 +6,7 @@ import xIcon from "../assets/images/icons/icon-x-button.svg"
 function closeButton(props) {
     return (
         <div className="close-button_wrapper pointer blue-on-hover" onClick={props.handleClick} >
-            <img src={xIcon} className="max-size" />
+            <img alt="" src={xIcon} className="max-size" />
         </div>
     );
 }

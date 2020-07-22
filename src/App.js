@@ -1,9 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react'
-
 import {
 	BrowserRouter as Router,
-	Link,
 	Route,
 	Switch,
 } from 'react-router-dom';
@@ -13,7 +10,6 @@ import Home from './pages/Home';
 
 
 function App(props) {
-	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	return (
 		<Router>

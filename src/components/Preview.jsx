@@ -3,8 +3,6 @@ import './Preview.css';
 
 import { Link } from 'react-router-dom';
 
-import arrow from "../assets/images/icons/arrow-button.svg"
-
 function Preview(props) {
 
     return (
