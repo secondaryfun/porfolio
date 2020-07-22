@@ -8,6 +8,7 @@ import './App.css';
 import './services/utilities.css';
 import Home from './pages/Home';
 import Skills from './pages/Skills';
+import ProjectDetail from './pages/ProjectDetail';
 
 
 function App(props) {
@@ -17,7 +18,7 @@ function App(props) {
 			<Switch>
 				<Route path="/" exact component={Home} />
 				<Route path="/skills" exact component={Skills} />
-				<Route path="/projects" exact component={Skills} />
+				<Route path="/projects" exact component={ProjectDetail} />
 			</Switch>
 		</Router>
 

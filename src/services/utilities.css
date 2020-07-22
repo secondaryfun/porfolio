@@ -46,6 +46,9 @@ font-weight: 400;
     display: flex;
     flex-flow: row wrap;
 }
+.flex-center {
+    justify-content: center;
+}
 .grid-1x1 {
     display: grid;
     grid-template-columns: 1fr;
