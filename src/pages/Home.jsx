@@ -71,12 +71,12 @@ function Home() {
                     {/* <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img> */}
                     <Menu img={true} />
                     <footer className="flex-row margin-5">
-                        <div>
+                        <div className="page-center">
                             <p>&copy;Red Cap Concepts | Washington DC | 2020</p>
                             <p>Design & Development by Christopher Birkenhagen</p>
                             <a href="https://stories.freepik.com/internet">Illustration by Stories by Freepik</a>
                         </div>
-                        <SocialMedia large={true} classNames={'page-center'} />
+                        <SocialMedia large={true} className={' page-center'} />
                     </footer>
                 </div>
             </div>
