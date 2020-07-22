@@ -1,0 +1,44 @@
+.skills-wrapper {
+    background-image: url('../assets/images/backgrounds/horizon-orange.svg');
+}
+.mid-page_skills {
+    background: #F24E32;
+}
+
+.page-runout--red {
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(247,93,59,1) 92%);
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(247,93,59,1) 92%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(247,93,59,1) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f75d3b",GradientType=1);
+}
+.mid-page_skills__title {
+    margin: 0 auto;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    color: #fff3f3;
+    font-family: "Open Sans";
+    font-weight: 700;
+    letter-spacing: -.7rem;
+    line-height: 8rem;
+    font-size: 8rem;
+
+}
+.vignette--skills {
+    position: relative;
+    bottom: 12rem;
+    z-index: 101;
+}
+
+@media screen and (min-width : 480px) {
+    .mid-page_skills__title {
+        font-size: 10rem;
+        line-height: 9rem;
+        width: 60%;
+    }
+}
+@media screen and (min-width : 1200px) {
+    .mid-page_skills__title {
+        font-size: 18rem;
+        line-height: 15rem;
+    }
+}

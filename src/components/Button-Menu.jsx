@@ -1,9 +1,17 @@
 import React from 'react';
 import './Button-Menu.css';
 
-import menuIcon from "../assets/images/icons/menu-icon.svg"
+import menuIconBlack from "../assets/images/icons/menu-icon-black.svg"
+import menuIconWhite from "../assets/images/icons/menu-icon-white.svg"
 
 function MenuButton(props) {
+    let menuIcon
+    if (props.color === 'white') {
+        menuIcon = menuIconWhite
+    } else {
+        menuIcon = menuIconBlack
+    }
+
     return (
         <div className="menu-button_wrapper" onClick={props.handleClick} >
             <img alt="" src={menuIcon} className="max-size" />
@@ -12,3 +20,7 @@ function MenuButton(props) {
 }
 
 export default MenuButton;
+
+MenuButton.defaultProps = {
+    color: 'black'
+};

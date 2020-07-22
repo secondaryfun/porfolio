@@ -23,11 +23,11 @@ function Menu(props) {
     }
 
     return (
-        <div className="menu-wrapper">
+        <div className={`menu-wrapper ${props.className}`}>
             {props.img ? <div onClick={toggleMenu} className="pointer">
                 <img alt="" src={contact} className="vignette--small grid-bottom margin-3 "></img>
             </div>
-                : <MenuButton handleClick={toggleMenu} />}
+                : <MenuButton handleClick={toggleMenu} color={props.color} />}
 
             {!isMenuOpen ? "" : (
                 <header className="menu-wrapper_open flex-column ">
@@ -49,3 +49,8 @@ function Menu(props) {
 }
 
 export default withRouter(Menu);
+
+
+Menu.defaultProps = {
+    color: 'black'
+};

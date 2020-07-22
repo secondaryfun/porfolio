@@ -40,7 +40,7 @@ function Home() {
                 <NavBarSmall />
                 <div className="mid-page yellow--dark" id="home-mid">
                     <h4 className="mid-page-title headline">BACKGROUND</h4>
-                    <img src={parallelLine} alt="" className="mid-page-underline" />
+                    <img src={parallelLine} alt="" className="" />
                     <h2 className="mid-page-callout oswald bold ">
                         Software Engineer. Operations Guru. Entrepreneur.
                 </h2>
@@ -70,7 +70,7 @@ function Home() {
                 <div className="page-runout--yellow page-runout grid-1x1" id="recent-work">
                     {/* <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img> */}
                     <Menu img={true} />
-                    <footer className="flex-row margin-5">
+                    <footer className="flex-row space-between margin-5">
                         <div className="page-center">
                             <p>&copy;Red Cap Concepts | Washington DC | 2020</p>
                             <p>Design & Development by Christopher Birkenhagen</p>
