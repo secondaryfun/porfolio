@@ -9,6 +9,7 @@ import SocialMedia from './SocialMedia.jsx'
 
 
 import contact from "../assets/images/characters/Get-in-touch-bro-green.svg"
+import logoName from "../assets/images/icons/logo-name-black.svg"
 
 
 function Menu(props) {
@@ -24,13 +25,15 @@ function Menu(props) {
     return (
         <div className="menu-wrapper">
             {props.img ? <div onClick={toggleMenu} className="pointer">
-                <img alt="" src={contact} className="vignette--small grid-bottom margin-3 hide-on-mobile"></img>
+                <img alt="" src={contact} className="vignette--small grid-bottom margin-3 "></img>
             </div>
                 : <MenuButton handleClick={toggleMenu} />}
 
             {!isMenuOpen ? "" : (
                 <header className="menu-wrapper_open flex-column ">
                     <CloseButton handleClick={toggleMenu} />
+                    <img src={logoName} alt="Christopher Birkenhagen" className="" />
+
                     <Link className="menu__link oswald" to="/" >HOME</Link>
                     <Link className="menu__link oswald" to="/skills" >SKILLS</Link>
                     <Link className="menu__link oswald" to="/Projects" >PROJECTS</Link>

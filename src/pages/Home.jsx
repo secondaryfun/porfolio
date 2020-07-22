@@ -57,22 +57,26 @@ function Home() {
                     </div>
                     <img alt="" src={triangle} className="split-page-img grid-position-1 grid-end z-index-mid"></img>
                     <img alt="" src={onlineShopping} className="vignette--small 
-                    grid-position-1 z-index-top margin-3 hide-on-mobile"></img>
+                    grid-position-1 z-index-top margin-3 hide-on-small"></img>
                     <img alt="" src={coding} className="vignette--small 
-                    grid-position-1 grid-end margin-3 hide-on-mobile "></img>
+                    grid-position-1 grid-end margin-3 hide-on-small "></img>
                     <Preview title="Checkers" link="/checkers"
-                        className={"grid-position-1 z-index-top grid-end margin-3 hide-on-mobile"}
+                        className={"grid-position-1 z-index-top grid-end margin-3 hide-on-small"}
                     />
                     <Preview title="Course Correct" link="/course-correct"
-                        className={"grid-position-1 z-index-top margin-3 hide-on-mobile auto-size"}
+                        className={"grid-position-1 z-index-top margin-3 hide-on-small auto-size"}
                     />
                 </div>
                 <div className="page-runout--yellow page-runout grid-1x1" id="recent-work">
-                    <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img>
+                    {/* <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img> */}
                     <Menu img={true} />
                     <footer className="flex-row margin-5">
-                        <p>Red Cap Concepts | Washington DC | 2020</p>
-                        <SocialMedia large={true} />
+                        <div>
+                            <p>&copy;Red Cap Concepts | Washington DC | 2020</p>
+                            <p>Design & Development by Christopher Birkenhagen</p>
+                            <a href="https://stories.freepik.com/internet">Illustration by Stories by Freepik</a>
+                        </div>
+                        <SocialMedia large={true} classNames={'page-center'} />
                     </footer>
                 </div>
             </div>

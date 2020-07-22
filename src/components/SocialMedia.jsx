@@ -11,19 +11,19 @@ function SocialMedia(props) {
             <a href="mailto:c.birkenhagen@gmail.com"
                 rel='noopener noreferrer'
                 target='_blank'
-                className={`social-media_link blue-on-hover ${!props.large ? "" : "social-media_link--large "}`}>
+                className={`social-media_link blue-on-hover ${props.className} ${!props.large ? "" : "social-media_link--large "}`}>
                 <img src={email} alt="email" className="max-size" />
             </a>
             <a href="https://www.linkedin.com/in/birkenhagen/"
                 rel='noopener noreferrer'
                 target='_blank'
-                className={`social-media_link blue-on-hover ${!props.large ? "" : "social-media_link--large"}`}>
+                className={`social-media_link blue-on-hover ${props.className} ${!props.large ? "" : "social-media_link--large"}`}>
                 <img src={linkedin} alt="linkedin" className="max-size" />
             </a>
             <a href="https://twitter.com/secondaryfun"
                 rel='noopener noreferrer'
                 target='_blank'
-                className={`social-media_link blue-on-hover ${!props.large ? "" : "social-media_link--large"}`}>
+                className={`social-media_link blue-on-hover ${props.className} ${!props.large ? "" : "social-media_link--large"}`}>
                 <img src={twitter} alt="twitter" className="max-size" />
             </a>
         </div>
