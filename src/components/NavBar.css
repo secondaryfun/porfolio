@@ -11,8 +11,11 @@
 .nav__link {
     font-size: 3.6rem;
     font-weight: 700;
+    color: #FFF3F3;
 }
-
+.nav__link:hover {
+    border-bottom: #FFF3F3 solid 5px;
+}
 .nav__logo-name {
     width: 100%;
     text-align: center;

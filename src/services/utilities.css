@@ -49,6 +49,8 @@ font-weight: 400;
 .flex-center {
     justify-content: center;
 }
+.flex-align-start { align-content: flex-start;}
+.flex-align-center { align-items: center;}
 .grid-1x1 {
     display: grid;
     grid-template-columns: 1fr;
@@ -145,7 +147,15 @@ font-weight: 400;
     height: 75vh;
 }
 .overflow-x {overflow-x: hidden}
-
+.background--yellow--dark {
+    background: #fccc05;
+}
+.background--yellow {
+    background: #fccc05;
+}
+.background--white {
+    background-color: #FFF3F3;
+}
 /* MARGINS */
 
 /* IMAGES */

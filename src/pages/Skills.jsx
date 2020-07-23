@@ -4,10 +4,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './Skills.css';
 import NavBar from "../components/NavBar.jsx"
 import NavBarSmall from "../components/NavBarSmall.jsx"
-import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
-import Preview from "../components/Preview.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 
 
@@ -48,14 +46,17 @@ function Skills() {
                     </div>
                     <div className="flex-row space-around ">
                         <InfoCard
+                            className="InfoCard-wrapper--orange"
                             title="Programming Languages"
                             items={['HTML', 'CSS', 'JavaScript']}
                         />
                         <InfoCard
+                            className="InfoCard-wrapper--orange"
                             title="Libraries & Frameworks"
                             items={['React', 'Bootstrap']}
                         />
                         <InfoCard
+                            className="InfoCard-wrapper--orange"
                             title="General"
                             items={["Ubuntu",
                                 "Linux",
@@ -78,6 +79,7 @@ function Skills() {
                         </div>
                         <div className="flex-row space-around">
                             <InfoCard
+                                className="InfoCard-wrapper--orange"
                                 title="Technology Stack"
                                 items={[
                                     "Node.JS/Express/Mongoose",
@@ -86,6 +88,7 @@ function Skills() {
                                 ]}
                             />
                             <InfoCard
+                                className="InfoCard-wrapper--orange"
                                 title="Libraries & Frameworks"
                                 items={[
                                     "React.JS ",
@@ -93,6 +96,7 @@ function Skills() {
                                 ]}
                             />
                             <InfoCard
+                                className="InfoCard-wrapper--orange"
                                 title="Databases"
                                 items={[
                                     "PostgreSQL ",

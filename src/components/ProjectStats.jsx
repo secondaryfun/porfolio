@@ -1,13 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import './ProjectStats.css';
-import Menu from "../components/Menu.jsx"
-
-
-import logoBlack from "../assets/images/icons/logo-black.svg"
-import logoWhite from "../assets/images/icons/logo-white.svg"
-import arrowUpBlack from "../assets/images/icons/arrow-up-black.svg"
-import arrowUpWhite from "../assets/images/icons/arrow-up-white.svg"
 
 function ProjectStats(props) {
     return (
@@ -25,7 +17,9 @@ function ProjectStats(props) {
                                 <p className="ProjectStats__info">{item}</p>)}
                         </div>
                         <div className="ProjectStats__title--stat">TECHNOLOGY</div>
-                        <p className="ProjectStats__info">{props.tech}</p>
+                        {!props.tech ? "" : props.tech.map((item, index) => {
+                            return <p className="ProjectStats__info" key={index} >{props.tech}</p>
+                        })}
                     </div>
                 </div>
                 <div className="ProjectStats__section">

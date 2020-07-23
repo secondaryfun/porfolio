@@ -19,27 +19,28 @@ function Menu(props) {
     }))
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
-        console.log("clicked")
     }
+    let colorClass = "background--yellow"
 
     return (
-        <div className={`menu-wrapper ${props.className}`}>
+        <div className={`menu-wrapper `}>
             {props.img ? <div onClick={toggleMenu} className="pointer">
                 <img alt="" src={contact} className="vignette--small grid-bottom margin-3 "></img>
             </div>
                 : <MenuButton handleClick={toggleMenu} color={props.color} />}
 
             {!isMenuOpen ? "" : (
-                <header className="menu-wrapper_open flex-column ">
+                <header className={`menu-wrapper_open flex-column ${props.color ? colorClass : "background--white"}`}>
                     <CloseButton handleClick={toggleMenu} />
                     <img src={logoName} alt="Christopher Birkenhagen" className="" />
-
-                    <Link className="menu__link oswald" to="/" >HOME</Link>
-                    <Link className="menu__link oswald" to="/skills" >SKILLS</Link>
-                    <Link className="menu__link oswald" to="/Projects" >PROJECTS</Link>
+                    <div>
+                        <Link className="menu__link oswald" to="/" >HOME</Link>
+                        <Link className="menu__link oswald" to="/skills" >SKILLS</Link>
+                        <Link className="menu__link oswald" to="/Projects" >PROJECTS</Link>
+                    </div>
                     <div className="flex-column margin-3">
                         <h3 className="open-sans headline">GET IN TOUCH</h3>
-                        <SocialMedia />
+                        <SocialMedia className={' page-center'} />
 
                     </div>
                 </header>
@@ -49,8 +50,3 @@ function Menu(props) {
 }
 
 export default withRouter(Menu);
-
-
-Menu.defaultProps = {
-    color: 'black'
-};

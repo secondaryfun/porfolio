@@ -1,5 +1,4 @@
 .menu-wrapper_open {
-    background: white;
     align-content: center;
     padding: 3rem;
     position: fixed;
@@ -13,6 +12,8 @@
 .menu__link {
     font-size: 3rem;
     letter-spacing: .3rem;
+    line-height: 6rem;
+    display: block;
 }
 .menu__link:hover  {
     background: blue;

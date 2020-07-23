@@ -1,0 +1,59 @@
+.projects-wrapper {
+    background-image: url('../assets/images/backgrounds/horizon-blue.svg');
+}
+.mid-page_projects {
+    background: #0E2FB3;
+}
+
+.page-runout--blue {
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(14,47,179,1) 92%);
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(14,47,179,1) 92%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(14,47,179,1) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#0e2fb3",GradientType=1);}
+
+.mid-page-project__wrapper {
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.mid-page-project__wrapper:hover {
+    background-color: #0635ee;
+    border-radius: 5px;
+}
+
+.mid-page-project__title {
+    max-height: min-content;
+    color: #fff3f3;
+    font-family: "Open Sans";
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.vignette--projects {
+    position: relative;
+    bottom: 12rem;
+    z-index: 101;
+}
+.mid-page-project__title {
+    font-size: 5rem;
+    line-height: 4rem;
+}
+@media screen and (min-width : 600px) {
+    .mid-page-project__title {
+        font-size: 8rem;
+        line-height: 6rem;
+        width: 50%;
+    }
+    
+}
+@media screen and (min-width : 950px) {
+   
+    .mid-page-project__wrapper {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width : 1200px) {
+   
+}
