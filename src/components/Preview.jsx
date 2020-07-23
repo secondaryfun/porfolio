@@ -1,14 +1,23 @@
 import React from 'react';
 import './Preview.css';
-
 import { Link } from 'react-router-dom';
 
-function Preview(props) {
+import arrow from "../assets/images/icons/arrow-button-white.svg"
 
+function Preview(props) {
+    const project = props.project
     return (
         <div className={`Preview-wrapper flex-column space-around ${props.className}`}>
             <h2 className="oswald">{props.title}</h2>
-            <Link to={props.link} className="open-sans headline">view project</Link>
+            <Link to={
+                {
+                    pathname: `/project-detail`,
+                    state: { project }
+                }
+            } className="open-sans headline">
+                view project
+                <img src={arrow} alt="arrow" className="Preview__img" />
+            </Link>
         </div>
     );
 }

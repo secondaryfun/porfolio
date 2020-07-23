@@ -8,6 +8,8 @@ import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import Preview from "../components/Preview.jsx"
+import projects from "../assets/data/projects"
+
 
 
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
@@ -25,7 +27,7 @@ function Home() {
     return (
         <main className="max-size">
             <div className="full-screen home-wrapper page-wrapper" id="top">
-                <NavBarSmall class='hide-on-large' />
+                <NavBarSmall className='hide-on-large' />
                 <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" />
                 <NavBar />
 
@@ -36,8 +38,8 @@ function Home() {
                     <img src={downArrow} alt="" className="" />
                 </Link>
             </div>
-            <div className="yellow--dark">
-                <NavBarSmall />
+            <div className="background--yellow--dark">
+                <NavBarSmall midPage={true} />
                 <div className="mid-page yellow--dark" id="home-mid">
                     <h4 className="mid-page-title headline">BACKGROUND</h4>
                     <img src={parallelLine} alt="" className="" />
@@ -53,22 +55,23 @@ function Home() {
                 <div className="mid-page_home grid-1x1 overflow-x" id="recent-work">
                     <div className="grid-center grid-position-1 z-index-top recent-work__heading-wrapper ">
                         <h1 className="mid-page_home__title">Recent Work</h1>
-                        <ArrowButton title="VIEW ALL WORK" />
+                        <Link to="/projects" >
+                            <ArrowButton title="VIEW ALL WORK" />
+                        </Link>
                     </div>
                     <img alt="" src={triangle} className="split-page-img grid-position-1 grid-end z-index-mid"></img>
                     <img alt="" src={onlineShopping} className="vignette--small 
                     grid-position-1 z-index-top margin-3 hide-on-small"></img>
                     <img alt="" src={coding} className="vignette--small 
                     grid-position-1 grid-end margin-3 hide-on-small "></img>
-                    <Preview title="Checkers" link="/checkers"
+                    <Preview title={projects[0].title} project={projects[0]}
                         className={"grid-position-1 z-index-top grid-end margin-3 hide-on-small"}
                     />
-                    <Preview title="Course Correct" link="/course-correct"
+                    <Preview title={projects[1].title} project={projects[1]}
                         className={"grid-position-1 z-index-top margin-3 hide-on-small auto-size"}
                     />
                 </div>
                 <div className="page-runout--yellow page-runout grid-1x1" id="recent-work">
-                    {/* <img alt="" src={coding} className="vignette--home vignette--small margin-3 only-mobile "></img> */}
                     <Menu img={true} />
                     <footer className="flex-row space-between margin-5">
                         <div className="page-center">

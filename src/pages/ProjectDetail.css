@@ -1,0 +1,13 @@
+.ProjectDetail__back-button {
+    color: #412222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    display: inline;
+    vertical-align: middle;
+}
+.ProjectDetail__back-button:hover {
+    font-weight: 700;
+}

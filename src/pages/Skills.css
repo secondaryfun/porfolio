@@ -4,7 +4,10 @@
 .mid-page_skills {
     background: #F24E32;
 }
+.InfoCard-wrapper--orange {
+    background: #F75D3B;
 
+}
 .page-runout--red {
     background: rgb(255,255,255);
     background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(247,93,59,1) 92%);

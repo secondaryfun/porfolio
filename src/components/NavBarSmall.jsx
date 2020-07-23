@@ -8,6 +8,7 @@ import logoBlack from "../assets/images/icons/logo-black.svg"
 import logoWhite from "../assets/images/icons/logo-white.svg"
 import arrowUpBlack from "../assets/images/icons/arrow-up-black.svg"
 import arrowUpWhite from "../assets/images/icons/arrow-up-white.svg"
+import arrowLeft from "../assets/images/icons/arrow-left-1.svg"
 
 function NavBarSmall(props) {
     let logo, arrowUp
@@ -18,14 +19,26 @@ function NavBarSmall(props) {
         logo = logoBlack
         arrowUp = arrowUpBlack
     }
+
     return (
         <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${props.className}`}>
-            <Link className="nav__link " to='#top'>
+            <Link className=" " to='#top'>
                 <img src={logo} alt="Home Screen" className="nav__logo" />
             </Link>
-            <Link className="nav__link hide-on-small" to='#top'>
-                <img src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
-            </Link>
+            {!props.midPage ? "" :
+                <Link className=" hide-on-small" to='#top'>
+                    <img src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
+                </Link>
+            }
+            {!props.projectDetail ? "" :
+                <Link className=" hide-on-small" to='/projects'>
+                    <div className="ProjectDetail__back-button">
+                        BACK TO PROJECTS
+                    </div>
+                    <img src={arrowLeft} alt="Return to Top" className="nav__arrow-up" />
+                </Link>
+
+            }
             <Menu color={props.color} className={props.menuClassName} />
         </nav>
     );

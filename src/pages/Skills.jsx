@@ -24,7 +24,7 @@ function Skills() {
     return (
         <main className="max-size">
             <div className="full-screen skills-wrapper page-wrapper" id="top">
-                <NavBarSmall class='hide-on-large' color="white" />
+                <NavBarSmall className='hide-on-large' color="white" />
                 <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" />
                 <NavBar color={'white'} />
 
@@ -36,7 +36,7 @@ function Skills() {
                 </Link>
             </div>
             <div className="mid-page_skills">
-                <NavBarSmall color={"white"} />
+                <NavBarSmall color={"white"} midPage={true} />
                 <div className="mid-page_skills grid-1x1 overflow-x" id="front-end-tech">
                     <div className="grid-position-1 page-center">
                         <div>

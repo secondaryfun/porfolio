@@ -16,7 +16,7 @@ function ProjectDetail(props) {
     return (
         <main className="max-size">
             <div className="" id="top">
-                <NavBarSmall color={true} />
+                <NavBarSmall color={true} projectDetail={true} />
                 <ProjectStats
                     title={project.title}
                     description={project.description}
