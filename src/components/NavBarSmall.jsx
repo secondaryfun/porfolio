@@ -22,7 +22,7 @@ function NavBarSmall(props) {
 
     return (
         <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${props.className}`}>
-            <Link className=" " to='#top'>
+            <Link className=" " to='/home'>
                 <img src={logo} alt="Home Screen" className="nav__logo" />
             </Link>
             {!props.midPage ? "" :
