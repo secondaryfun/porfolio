@@ -10,13 +10,13 @@ import ProjectStats from "../components/ProjectStats.jsx"
 
 function ProjectDetail(props) {
     const proj = !props.location.state ? "" : props.location.state.project
-    const [project, setProject] = useState(proj)
+    const [project] = useState(proj)
 
 
     return (
         <main className="max-size">
             <div className="" id="top">
-                <NavBarSmall color={true} projectDetail={true} />
+                <NavBarSmall backgroundColor={true} projectDetail={true} />
                 <ProjectStats
                     title={project.title}
                     description={project.description}

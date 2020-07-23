@@ -10,7 +10,11 @@
 .Preview-wrapper h2 {
     font-size: 3rem;
 }
-.Preview-wrapper > a:hover {
+.Preview__link {
+    line-height: 7rem;
+    vertical-align: middle;
+}
+.Preview__link:hover {
     font-weight: 700;
 }
 .Preview__img {

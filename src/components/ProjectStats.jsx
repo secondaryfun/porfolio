@@ -13,8 +13,8 @@ function ProjectStats(props) {
                     <div className="inline-block">
                         <div className="ProjectStats__title--stat">DELIVERABLES</div>
                         <div>
-                            {!props.items ? "" : props.items.map(item =>
-                                <p className="ProjectStats__info">{item}</p>)}
+                            {!props.items ? "" : props.items.map((item, index) =>
+                                <p className="ProjectStats__info" key={index} >{item}</p>)}
                         </div>
                         <div className="ProjectStats__title--stat">TECHNOLOGY</div>
                         {!props.tech ? "" : props.tech.map((item, index) => {

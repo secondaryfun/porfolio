@@ -23,20 +23,22 @@ function Menu(props) {
     let colorClass = "background--yellow"
 
     return (
-        <div className={`menu-wrapper `}>
+        <div className={` ${props.className}`}>
             {props.img ? <div onClick={toggleMenu} className="pointer">
-                <img alt="" src={contact} className="vignette--small grid-bottom margin-3 "></img>
+                <img alt="" src={contact} className="vignette--small grid-bottom margin-3 Menu__vignette"></img>
             </div>
                 : <MenuButton handleClick={toggleMenu} color={props.color} />}
 
             {!isMenuOpen ? "" : (
-                <header className={`menu-wrapper_open flex-column ${props.color ? colorClass : "background--white"}`}>
+                <header className={`menu-wrapper_open flex-column ${props.backgroundColor ? colorClass : "background--white"}`}>
                     <CloseButton handleClick={toggleMenu} />
-                    <img src={logoName} alt="Christopher Birkenhagen" className="" />
+                    <img src={logoName} alt="Christopher Birkenhagen" className="Menu__img" />
                     <div>
-                        <Link className="menu__link oswald" to="/" >HOME</Link>
+                        <Link className="menu__link oswald" to="/home" >HOME</Link>
+                        {/* <Link className="menu__link oswald" to="/blog" >BLOG</Link> */}
                         <Link className="menu__link oswald" to="/skills" >SKILLS</Link>
-                        <Link className="menu__link oswald" to="/Projects" >PROJECTS</Link>
+                        <Link className="menu__link oswald" to="/projects" >PROJECTS</Link>
+                        <Link className="menu__link oswald" to="/resume" >RESUME</Link>
                     </div>
                     <div className="flex-column margin-3">
                         <h3 className="open-sans headline">GET IN TOUCH</h3>
@@ -50,3 +52,7 @@ function Menu(props) {
 }
 
 export default withRouter(Menu);
+
+Menu.defaultProps = {
+    color: 'black'
+};

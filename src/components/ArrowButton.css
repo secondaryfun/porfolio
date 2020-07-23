@@ -17,8 +17,8 @@
 .ArrowButton-arrow {
     margin-right: 2rem;
 }
-.ArrowButton-wrapper:hover, .ArrowButton__title:hover {
-    background: white;
+.ArrowButton-wrapper:hover{
+    background: #fff3f3;
     border-color: #412222;
     cursor: pointer;
 }

@@ -2,6 +2,7 @@
     margin: 0 1rem;
     padding-top: 2rem;
     z-index: 100;
+    align-items: flex-start;
 }
 .nav-wrapper--small  {
     position: -webkit-sticky;
@@ -13,12 +14,18 @@
     font-weight: 700;
     color: #FFF3F3;
 }
-.nav__link:hover {
+.NavBar__white:hover {
     border-bottom: #FFF3F3 solid 5px;
+}
+.NavBar__black:hover {
+    border-bottom: #412222 solid 5px;
 }
 .nav__logo-name {
     width: 100%;
     text-align: center;
+}
+.NavBar__menu {
+    margin-top: 4rem;
 }
 
 @media screen and (min-width : 480px) {

@@ -1,7 +1,7 @@
 .ProjectDetail__back-button {
     color: #412222;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
     margin-right: 2rem;
@@ -10,4 +10,10 @@
 }
 .ProjectDetail__back-button:hover {
     font-weight: 700;
+}
+
+@media screen and (min-width : 480px) {
+    .ProjectDetail__back-button {
+        font-size: 2rem;
+    }
 }

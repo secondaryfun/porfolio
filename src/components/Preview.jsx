@@ -14,7 +14,7 @@ function Preview(props) {
                     pathname: `/project-detail`,
                     state: { project }
                 }
-            } className="open-sans headline">
+            } className="open-sans headline Preview__link">
                 view project
                 <img src={arrow} alt="arrow" className="Preview__img" />
             </Link>

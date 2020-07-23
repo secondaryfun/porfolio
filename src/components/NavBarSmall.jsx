@@ -31,15 +31,15 @@ function NavBarSmall(props) {
                 </Link>
             }
             {!props.projectDetail ? "" :
-                <Link className=" hide-on-small" to='/projects'>
-                    <div className="ProjectDetail__back-button">
+                <Link className=" " to='/projects'>
+                    <p className="ProjectDetail__back-button">
                         BACK TO PROJECTS
-                    </div>
+                    </p>
                     <img src={arrowLeft} alt="Return to Top" className="nav__arrow-up" />
                 </Link>
 
             }
-            <Menu color={props.color} className={props.menuClassName} />
+            <Menu backgroundColor={props.backgroundColor} color={props.color} className={props.menuClassName} />
         </nav>
     );
 }

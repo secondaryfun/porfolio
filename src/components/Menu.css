@@ -21,6 +21,13 @@
     border-radius: .5rem;
     cursor: pointer;
 }
+.Menu__img {
+    margin-bottom: 2rem;
+}
+.Menu__vignette:hover {
+    background-color: #2FCE6E;
+    border-radius: 5px;
+}
 
 @media screen and (min-width : 950px) {
     .menu-wrapper_open {

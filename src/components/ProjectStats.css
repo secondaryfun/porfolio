@@ -1,11 +1,12 @@
 .ProjectStats__title--stat {
     color: #412222;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
     text-align: left;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .ProjectStats__info {
@@ -13,10 +14,10 @@
     text-align: left;
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
-    line-height: 1rem;
     letter-spacing: .1rem;
     text-transform: uppercase;
     max-width: 30rem;
+    margin: 0;
 }
 
 .ProjectStats__title {
@@ -24,16 +25,36 @@
     text-transform: uppercase;
     text-align: left;
     font-family: 'Oswald', sans-serif;
-    font-size: 5.2rem;
+    font-size: 4rem;
 }
 .ProjectStats__title__info {
     color: #412222;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: .1rem;
     text-align: left;
 }
 .ProjectStats__section {
     width: 45%;
+}
+@media screen and (min-width : 480px) {
+    .ProjectStats__title--stat {
+        font-size: 2.4rem;
+    }
+    .ProjectStats__info {
+        font-size: 1.8rem;
+    }
+    .ProjectStats__title {
+        font-size: 5.2rem;
+    }
+}
+
+@media screen and (min-width : 650px) {
+    .ProjectStats__title__info {
+        font-size: 2.2rem;
+    }
+}
+@media screen and (min-width : 1600px) {
+    
 }
