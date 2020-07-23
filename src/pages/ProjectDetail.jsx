@@ -25,7 +25,7 @@ import logoName from "../assets/images/icons/logo-name-black.svg"
 function ProjectDetail() {
     return (
         <main className="max-size">
-            <div className="full-screen home-wrapper page-wrapper" id="top">
+            <div className="" id="top">
                 <NavBarSmall />
                 <ProjectStats
                     title="Course Correct"
