@@ -9,7 +9,6 @@ import logoWhite from "../assets/images/icons/logo-name-white.svg"
 
 function NavBar(props) {
     const match = useRouteMatch()
-    console.log(match)
     let textColor, logo, hover
     if (props.color === 'white') {
         textColor = "#FFF3F3"
