@@ -18,6 +18,7 @@
     text-transform: uppercase;
     max-width: 30rem;
     margin: 0;
+    display: block;
 }
 
 .ProjectStats__title {

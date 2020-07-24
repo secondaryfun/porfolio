@@ -17,12 +17,14 @@ function ProjectDetail(props) {
             <div className="" id="top">
                 <NavBarSmall backgroundColor={true} projectDetail={true} />
                 <ProjectStats
+                    project={project}
                     title={project.title}
                     description={project.description}
                     items={project.items}
                     tech={project.tech}
+                    github={project.github}
                 />
-                <iFrame src={project.link} className="ProjectDetail__iframe" />
+                <iframe title="project detail" src={project.link} className="ProjectDetail__iframe" />
             </div>
         </main>
     );
