@@ -11,6 +11,10 @@
 .ProjectDetail__back-button:hover {
     font-weight: 700;
 }
+.ProjectDetail__iframe {
+    width: 90vw;
+    height: 90vh;
+}
 
 @media screen and (min-width : 480px) {
     .ProjectDetail__back-button {

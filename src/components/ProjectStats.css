@@ -26,6 +26,8 @@
     text-align: left;
     font-family: 'Oswald', sans-serif;
     font-size: 4rem;
+    position: sticky;
+    position: -webkit-sticky;
 }
 .ProjectStats__title__info {
     color: #412222;

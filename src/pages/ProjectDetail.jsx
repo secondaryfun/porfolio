@@ -7,14 +7,13 @@ import NavBarSmall from "../components/NavBarSmall.jsx"
 import ProjectStats from "../components/ProjectStats.jsx"
 
 
-
 function ProjectDetail(props) {
     const proj = !props.location.state ? "" : props.location.state.project
     const [project] = useState(proj)
 
 
     return (
-        <main className="max-size">
+        <main className="max-size background--white">
             <div className="" id="top">
                 <NavBarSmall backgroundColor={true} projectDetail={true} />
                 <ProjectStats
@@ -23,6 +22,7 @@ function ProjectDetail(props) {
                     items={project.items}
                     tech={project.tech}
                 />
+                <iFrame src={project.link} className="ProjectDetail__iframe" />
             </div>
         </main>
     );

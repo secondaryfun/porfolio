@@ -21,26 +21,28 @@ function NavBarSmall(props) {
     }
 
     return (
-        <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${props.className}`}>
+        <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${props.className} ${!props.projectDetail ? "" : "background--white"}`}>
             <Link className=" " to='/home'>
                 <img src={logo} alt="Home Screen" className="nav__logo" />
             </Link>
-            {!props.midPage ? "" :
-                <Link className=" hide-on-small" to='#top'>
-                    <img src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
-                </Link>
+            {
+                !props.midPage ? "" :
+                    <Link className=" hide-on-small" to='#top'>
+                        <img src={arrowUp} alt="Return to Top" className="nav__arrow-up" />
+                    </Link>
             }
-            {!props.projectDetail ? "" :
-                <Link className=" " to='/projects'>
-                    <p className="ProjectDetail__back-button">
-                        BACK TO PROJECTS
+            {
+                !props.projectDetail ? "" :
+                    <Link className=" " to='/projects'>
+                        <p className="ProjectDetail__back-button">
+                            BACK TO PROJECTS
                     </p>
-                    <img src={arrowLeft} alt="Return to Top" className="nav__arrow-up" />
-                </Link>
+                        <img src={arrowLeft} alt="Return to Top" className="nav__arrow-up" />
+                    </Link>
 
             }
             <Menu backgroundColor={props.backgroundColor} color={props.color} className={props.menuClassName} />
-        </nav>
+        </nav >
     );
 }
 
