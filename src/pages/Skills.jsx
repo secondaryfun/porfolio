@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 
 import './Skills.css';
@@ -17,10 +18,14 @@ import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-red.svg'
 import logoName from "../assets/images/icons/logo-name-white.svg"
 
-
-
-
 function Skills() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        return () => {
+
+        }
+    }, [])
     return (
         <main className="max-size">
             <div className="full-screen skills-wrapper page-wrapper" id="top">

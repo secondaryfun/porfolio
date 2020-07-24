@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { useEffect } from 'react'
 
 import './Home.css';
 import NavBar from "../components/NavBar.jsx"
@@ -23,7 +24,16 @@ import logoName from "../assets/images/icons/logo-name-black.svg"
 
 
 
+
 function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        return () => {
+
+        }
+    }, [])
+
     return (
         <main className="max-size">
             <div className="full-screen home-wrapper page-wrapper" id="top">

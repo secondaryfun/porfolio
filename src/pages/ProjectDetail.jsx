@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
 
 import './ProjectDetail.css';
 import NavBarSmall from "../components/NavBarSmall.jsx"
@@ -11,6 +10,12 @@ function ProjectDetail(props) {
     const proj = !props.location.state ? "" : props.location.state.project
     const [project] = useState(proj)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        return () => {
+
+        }
+    }, [])
 
     return (
         <main className="max-size background--white">
