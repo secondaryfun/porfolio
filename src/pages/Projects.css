@@ -37,12 +37,10 @@
 }
 .mid-page-project__title {
     font-size: 5rem;
-    line-height: 4rem;
+    line-height: 4.5rem;
 }
 @media screen and (min-width : 600px) {
     .mid-page-project__title {
-        font-size: 8rem;
-        line-height: 7rem;
         width: 50%;
     }
     
