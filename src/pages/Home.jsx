@@ -11,8 +11,6 @@ import Menu from "../components/Menu.jsx"
 import Preview from "../components/Preview.jsx"
 import projects from "../assets/data/projects"
 
-
-
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
 import onlineShopping from "../assets/images/characters/Online shopping-bro-purple.svg"
 import coding from "../assets/images/characters/Coding-bro-purple.svg"
@@ -20,10 +18,6 @@ import downArrow from "../assets/images/icons/arrow-head-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
 import logoName from "../assets/images/icons/logo-name-black.svg"
-
-
-
-
 
 function Home() {
 
@@ -40,7 +34,9 @@ function Home() {
                 <NavBarSmall className='hide-on-large' />
                 <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" />
                 <NavBar />
-
+                <div className="mid-page-callout oswald bold ">
+                    Full-Stack Developer. Operations Guru. Entrepreneur.
+                </div>
                 <div className="vignette-wrapper">
                     <img src={homeVignette} alt="Chris At Work" className="home-vignette vignette" />
                 </div>
@@ -53,9 +49,7 @@ function Home() {
                 <div className="mid-page yellow--dark" id="home-mid">
                     <h4 className="mid-page-title headline">BACKGROUND</h4>
                     <img src={parallelLine} alt="" className="" />
-                    <h2 className="mid-page-callout oswald bold ">
-                        Software Engineer. Operations Guru. Entrepreneur.
-                </h2>
+
                     <p className="mid-page-text">
                         I am a full-stack software engineer in Washington DC .
                         As a dedicated entrepreneur with expertise in project management, operations, and finance,
@@ -74,10 +68,10 @@ function Home() {
                     grid-position-1 z-index-top margin-3 hide-on-small"></img>
                     <img alt="" src={coding} className="vignette--small 
                     grid-position-1 grid-end margin-3 hide-on-small "></img>
-                    <Preview title={projects[0].title} project={projects[0]}
-                        className={"grid-position-1 z-index-top grid-end margin-3 hide-on-small"}
+                    <Preview title={projects[0].title} project={projects[0]} id="preview-1"
+                        className={"grid-position-1 z-index-top grid-end margin-3 hide-on-small "}
                     />
-                    <Preview title={projects[1].title} project={projects[1]}
+                    <Preview title={projects[1].title} project={projects[1]} id="preview-2"
                         className={"grid-position-1 z-index-top margin-3 hide-on-small auto-size"}
                     />
                 </div>
@@ -93,7 +87,6 @@ function Home() {
                     </footer>
                 </div>
             </div>
-
         </main>
     );
 }
