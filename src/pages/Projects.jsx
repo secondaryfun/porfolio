@@ -65,7 +65,7 @@ function Projects() {
                         <div className="page-center">
                             <p>&copy;Red Cap Concepts | Washington DC | 2020</p>
                             <p>Design & Development by Christopher Birkenhagen</p>
-                            <a href="https://stories.freepik.com/internet">Illustration by Stories by Freepik</a>
+                            <a rel='noopener noreferrer' target='_blank' href="https://stories.freepik.com/internet">Illustration by Stories by Freepik</a>
                         </div>
                         <SocialMedia large={true} className={' page-center'} />
                     </footer>
