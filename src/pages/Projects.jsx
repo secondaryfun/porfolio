@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 
 import './Projects.css';
 import NavBar from "../components/NavBar.jsx"
-import NavBarSmall from "../components/NavBarSmall.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
@@ -15,7 +14,6 @@ import projects from "../assets/data/projects"
 import projectsVignette from "../assets/images/characters/Organizing projects-pana-mint.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
-import logoName from "../assets/images/icons/logo-name-white.svg"
 
 function Projects() {
 

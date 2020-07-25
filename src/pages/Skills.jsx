@@ -4,7 +4,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import './Skills.css';
 import NavBar from "../components/NavBar.jsx"
-import NavBarSmall from "../components/NavBarSmall.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
@@ -16,7 +15,6 @@ import laptopTable from "../assets/images/characters/character-laptop-table.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-red.svg'
-import logoName from "../assets/images/icons/logo-name-white.svg"
 
 function Skills() {
 
