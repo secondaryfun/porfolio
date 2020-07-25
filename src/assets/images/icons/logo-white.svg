@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="56.423" height="84.193" viewBox="0 0 56.423 84.193"><defs><style>.a{fill:#fff3f3;}.b,.c{fill:none;stroke:#fff3f3;}.b{stroke-width:2px;}.c{stroke-width:8px;}</style></defs><g transform="translate(0.192 4)"><path class="a" d="M0,0H17.99q12.3,0,17.851,3.376T41.4,14.115a13.192,13.192,0,0,1-2.432,8.2A9.768,9.768,0,0,1,32.5,26.17v.381q5.5,1.183,7.927,4.425A14.026,14.026,0,0,1,42.859,39.6a14.019,14.019,0,0,1-5.713,11.9q-5.713,4.273-15.519,4.273H0ZM12.257,22.088h7.117q4.982,0,7.216-1.488t2.234-4.921a4.879,4.879,0,0,0-2.432-4.6Q23.96,9.69,18.7,9.69H12.257Zm0,9.385V46.007h7.987q5.061,0,7.473-1.869a6.787,6.787,0,0,0,2.412-5.722q0-6.943-10.28-6.943Z" transform="translate(6.277 9.919)"/><line class="b" y2="56" transform="translate(54.808 10.193)"/><line class="c" x2="56.231" transform="translate(0 76.193)"/><line class="c" x2="56.231"/><line class="b" y2="56" transform="translate(0.808 10.193)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="67.264" height="84.193" viewBox="0 0 67.264 84.193">
+  <g id="Logo-white" transform="translate(0.034 4)">
+    <path id="B" d="M0,0H21.509q14.7,0,21.344,3.376a11.26,11.26,0,0,1,6.642,10.739,11.738,11.738,0,0,1-2.907,8.2,12.251,12.251,0,0,1-7.729,3.853v.381q6.571,1.183,9.478,4.425A12.431,12.431,0,0,1,51.244,39.6q0,7.63-6.831,11.9T25.858,55.773H0ZM14.655,22.088h8.509q5.956,0,8.627-1.488a5.189,5.189,0,0,0,2.671-4.921,4.746,4.746,0,0,0-2.907-4.6Q28.647,9.69,22.36,9.69H14.655Zm0,9.385V46.007H24.2q6.051,0,8.935-1.869a6.347,6.347,0,0,0,2.884-5.722q0-6.943-12.291-6.943Z" transform="translate(7.505 9.919)" fill="#fff3f3"/>
+    <line id="line-vert" y2="56" transform="translate(65.53 10.193)" fill="none" stroke="#fff3f3" stroke-width="2"/>
+    <line id="line-bottom" x2="67.231" transform="translate(0 76.193)" fill="none" stroke="#fff3f3" stroke-width="8"/>
+    <line id="line-top" x2="67.231" fill="none" stroke="#fff3f3" stroke-width="8"/>
+    <line id="line-vert-2" data-name="line-vert" y2="56" transform="translate(0.966 10.193)" fill="none" stroke="#fff3f3" stroke-width="2"/>
+  </g>
+</svg>

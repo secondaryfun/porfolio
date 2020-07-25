@@ -4,8 +4,8 @@ import './NavBar.css';
 import Menu from "../components/Menu.jsx"
 
 
-import logoBlack from "../assets/images/icons/logo-name-black.svg"
-import logoWhite from "../assets/images/icons/logo-name-white.svg"
+import logoBlack from "../assets/images/icons/logo-black.svg"
+import logoWhite from "../assets/images/icons/logo-white.svg"
 
 function NavBar(props) {
     const match = useRouteMatch()
@@ -21,18 +21,22 @@ function NavBar(props) {
     }
 
     return (
-        <nav className="nav-wrapper flex-row space-between hide-on-small">
+        <nav className={`nav-wrapper flex-row space-between sticky hide-on-small ${props.className}`}>
             <Link to="/" >
-                <img src={logo} alt="Christopher Birkenhagen" className="nav__logo-name" />
+                <img src={logo} alt="Christopher Birkenhagen" className="nav__logo" />
             </Link>
             <div className="nav__link-wrapper nav-bar-margins flex-row hide-on-small">
-                {/* <Link className={`nav__link ${hover} ${match !== "/blog" ? "" : "Menu__link--underline"}`} style={{ color: textColor }} to="/blog" >BLOG</Link> */}
-                <Link className={`nav__link ${hover} ${match !== "/skills" ? "" : "Menu__link--underline"}`} style={{ color: textColor }} to="/skills" >SKILLS</Link>
-                <Link className={`nav__link ${hover} ${match !== "/projects" ? "" : "Menu__link--underline"}`} style={{ color: textColor }} to="/projects" >PROJECTS</Link>
-                <Link className={`nav__link ${hover} ${match !== "/resume" ? "" : "Menu__link--underline"}`} style={{ color: textColor }} to="/resume" >RESUME</Link>
+                {/* <Link className={`nav__link ${hover} ${match !== "/blog" ? "" : 
+                "Menu__link--underline"}`} style={{ color: textColor }} to="/blog" >BLOG</Link> */}
+                <Link className={`nav__link ${hover} ${match !== "/skills" ? "" :
+                    "Menu__link--underline"}`} style={{ color: textColor }} to="/skills" >SKILLS</Link>
+                <Link className={`nav__link ${hover} ${match !== "/projects" ? "" :
+                    "Menu__link--underline"}`} style={{ color: textColor }} to="/projects" >PROJECTS</Link>
+                <Link className={`nav__link ${hover} ${match !== "/resume" ? "" :
+                    "Menu__link--underline"}`} style={{ color: textColor }} to="/resume" >RESUME</Link>
             </div>
-            <Menu backgroundColor={props.backgroundColor} color={props.color} className={"NavBar__menu"} />
-            {/* <Link className="nav__link nav-bar-margins hide-on-small" style={{ color: textColor }} to="/Projects">CONTACT</Link> */}
+            <Menu backgroundColor={props.backgroundColor} color={props.color} className={"nav__logo"} />
+
         </nav>
     );
 }

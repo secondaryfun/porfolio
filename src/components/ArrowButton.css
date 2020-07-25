@@ -1,6 +1,6 @@
 .ArrowButton-wrapper {
     border: #fff3f3 solid .4rem;
-    width: 25rem;
+    max-width: 25rem;
     margin: 2rem auto;
 }
 .ArrowButton__title{
@@ -10,12 +10,13 @@
     font-weight: 700;
     letter-spacing: -1.6px;
     text-transform: uppercase;
-    border-right: #fff3f3 solid .4rem;
+    /* border-right: #fff3f3 solid .4rem; */
     padding: 0 1rem;
     line-height: 4rem;    
 }
 .ArrowButton-arrow {
-    margin-right: 2rem;
+    margin: 0 auto;
+    width: 20%;
 }
 .ArrowButton-wrapper:hover{
     background: #fff3f3;

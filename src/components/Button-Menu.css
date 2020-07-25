@@ -1,3 +1,6 @@
+.MenuButton__wrapper {
+    height: 100%;
+}
 .MenuButton__wrapper:hover {
     cursor: pointer;
 }

@@ -21,7 +21,7 @@ function NavBarSmall(props) {
     }
 
     return (
-        <nav className={`nav-wrapper nav-wrapper--small flex-row space-between ${props.className} ${!props.projectDetail ? "" : "background--white"}`}>
+        <nav className={`nav-wrapper sticky flex-row space-between ${props.className} ${!props.projectDetail ? "" : "background--white"}`}>
             <Link className=" " to='/home'>
                 <img src={logo} alt="Home Screen" className="nav__logo" />
             </Link>

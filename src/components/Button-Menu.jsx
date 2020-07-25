@@ -13,7 +13,7 @@ function MenuButton(props) {
     }
 
     return (
-        <div className="MenuButton__wrapper" onClick={props.handleClick} >
+        <div className="MenuButton__wrapper " onClick={props.handleClick} >
             <img alt="" src={menuIcon} className="max-size" />
         </div>
     );

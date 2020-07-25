@@ -31,11 +31,13 @@ function Home() {
     return (
         <main className="max-size">
             <div className="full-screen home-wrapper page-wrapper" id="top">
-                <NavBarSmall className='hide-on-large' />
-                <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" />
+                {/* <NavBarSmall className='hide-on-large' /> */}
+                {/* <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" /> */}
                 <NavBar />
-                <div className="mid-page-callout oswald bold ">
-                    Full-Stack Developer. Operations Guru. Entrepreneur.
+                <div>
+
+                    <div className="mid-page-callout oswald bold ">Christopher Birkenhagen</div>
+                    <p className="mid-page-text" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
                 </div>
                 <div className="vignette-wrapper">
                     <img src={homeVignette} alt="Chris At Work" className="home-vignette vignette" />
@@ -45,7 +47,7 @@ function Home() {
                 </Link>
             </div>
             <div className="background--yellow--dark">
-                <NavBarSmall midPage={true} />
+                {/* <NavBarSmall midPage={true} /> */}
                 <div className="mid-page yellow--dark" id="home-mid">
                     <h4 className="mid-page-title headline">BACKGROUND</h4>
                     <img src={parallelLine} alt="" className="" />
@@ -54,7 +56,10 @@ function Home() {
                         I am a full-stack software engineer in Washington DC .
                         As a dedicated entrepreneur with expertise in project management, operations, and finance,
                         I help companies find technical solutions to achieve their goals.
-                </p>
+                    </p>
+                    <Link to="/skills" >
+                        <ArrowButton title="MORE INFO" />
+                    </Link>
                 </div>
                 <div className="mid-page_home grid-1x1 overflow-x" id="recent-work">
                     <div className="grid-center grid-position-1 z-index-top recent-work__heading-wrapper ">

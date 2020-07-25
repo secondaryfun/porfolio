@@ -4,7 +4,11 @@
 .center {    text-align: center;}
 .left {    text-align: left;}
 .bold { font-weight: 700;}
-.mid-page-callout { font-size: 3rem;}
+.mid-page-callout { 
+    font-size: 3rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+}
 .mid-page-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -166,8 +170,7 @@ font-weight: 400;
     width: 100%;
 }
 .vignette--small {
-    height: 30rem;
-    width: 30rem;
+    width: 60%;
 }
 .hide-on-small, .hide-on-mobile {
     position: absolute;
@@ -185,12 +188,13 @@ font-weight: 400;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1837fd",GradientType=1);
 }
 
+
 @media screen and (min-width : 480px) {
     .responsive-flex-row {
         flex-flow: row wrap;
     }
     .vignette-wrapper {
-        width: 40%;
+        width: 60%;
         display: block;
         margin: 0 auto; 
         position: relative;
@@ -205,7 +209,10 @@ font-weight: 400;
         width: 100%;
         padding: 4rem 2rem;
     }
-    .mid-page-callout { font-size: 5rem;}
+    .mid-page-callout { 
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
     .vignette--small {
         height: 18rem;
         width: 18rem;
@@ -225,6 +232,9 @@ font-weight: 400;
     }
     .hide-on-large {
         display: none;
+    }
+    .vignette-wrapper {
+        width: 50%;
     }
     .vignette--small {
         height: 25rem;
