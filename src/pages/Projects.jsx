@@ -29,8 +29,6 @@ function Projects() {
     return (
         <main className="max-size">
             <div className="full-screen projects-wrapper page-wrapper" id="top">
-                <NavBarSmall className='hide-on-large' color="white" />
-                <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" />
                 <NavBar color={'white'} />
 
                 <div className="vignette-wrapper">
@@ -41,7 +39,6 @@ function Projects() {
                 </Link>
             </div>
             <div className="mid-page_projects">
-                <NavBarSmall color={"white"} midPage={true} />
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>
                         <h4 className="mid-page-title headline white">Select Projects</h4>

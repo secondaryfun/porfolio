@@ -41,7 +41,7 @@ function NavBarSmall(props) {
                     </Link>
 
             }
-            <Menu backgroundColor={props.backgroundColor} color={props.color} className={props.menuClassName} />
+            <Menu backgroundColor={props.backgroundColor} color={props.color} className={`nav__logo ${props.menuClassName}`} />
         </nav >
     );
 }
