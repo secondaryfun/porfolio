@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 
 import './Home.css';
 import NavBar from "../components/NavBar.jsx"
-import NavBarSmall from "../components/NavBarSmall.jsx"
 import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
@@ -17,9 +16,8 @@ import coding from "../assets/images/characters/Coding-bro-purple.svg"
 import downArrow from "../assets/images/icons/arrow-head-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
-import logoName from "../assets/images/icons/logo-name-black.svg"
 
-function Home() {
+export default function Home() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -29,13 +27,10 @@ function Home() {
     }, [])
 
     return (
-        <main className="max-size">
+        <main className="main__wrapper">
             <div className="full-screen home-wrapper page-wrapper" id="top">
-                {/* <NavBarSmall className='hide-on-large' /> */}
-                {/* <img src={logoName} alt="Christopher Birkenhagen" className="page-center nav__logo-name hide-on-large" /> */}
                 <NavBar />
                 <div>
-
                     <div className="mid-page-callout oswald bold ">Christopher Birkenhagen</div>
                     <p className="mid-page-text" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
                 </div>
@@ -93,7 +88,5 @@ function Home() {
                 </div>
             </div>
         </main>
-    );
+    )
 }
-
-export default Home;

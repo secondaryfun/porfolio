@@ -30,6 +30,10 @@ font-weight: 400;
     text-decoration: underline;
 }
 /* LAYOUT */
+.main__wrapper {
+    height: 100%;
+    width: 100%;
+}
 .page-wrapper { 
     display: flex;
     flex-flow: column nowrap;
@@ -115,6 +119,7 @@ font-weight: 400;
     height: 100%;
     width: 100%;
 }
+
 .auto-size {
     height: auto;
     width: auto;
@@ -254,5 +259,13 @@ font-weight: 400;
     .vignette--small {
         height: 30rem;
         width: 30rem;
+    }
+}
+@media screen and (min-width : 1900px) {
+
+    .main__wrapper {
+        width: 1900px;
+        margin: 3rem auto;
+        box-shadow: 15px 15px 15px rgba(0, 0, 0, .3);
     }
 }
