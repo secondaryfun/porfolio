@@ -10,9 +10,9 @@
     z-index: 100;
 }
 .menu__link {
-    font-size: 3rem;
     letter-spacing: .3rem;
-    line-height: 6rem;
+    font-size: 3rem;
+    line-height: 4rem;
     display: block;
 }
 .menu__link:hover  {
@@ -23,16 +23,47 @@
 }
 .Menu__img {
     margin-bottom: 2rem;
+    width: 100%;
+    margin: 2rem;
 }
 .Menu__vignette:hover {
     background-color: #2FCE6E;
     border-radius: 5px;
 }
+.portrait__wrapper {
+    /* height: 10rem; */
+}
+.portrait {
+    height: 10rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-image: url("../assets/images/characters/Chris-600.jpg");
+    background-size: 150%;
+    background-position: center;
+}
 
+@media screen and (min-width : 450px) {
+    .menu__link {
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width : 650px) {
+    .Menu__img {
+        width: 30rem;
+    }
+}
 @media screen and (min-width : 950px) {
     .menu-wrapper_open {
         height: auto;
         width: 90vw;
         right: 1.5vw;
+    }
+}
+@media screen and (min-width : 1900px) {
+    .menu-wrapper_open {
+        height: auto;
+        width: 57vw;
+        right: 19vw;
+        top: 6vh;
     }
 }

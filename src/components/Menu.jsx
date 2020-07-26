@@ -10,6 +10,7 @@ import SocialMedia from './SocialMedia.jsx'
 
 import contact from "../assets/images/characters/Get-in-touch-bro-green.svg"
 import logoName from "../assets/images/icons/logo-name-black.svg"
+import chris from "../assets/images/characters/Chris-600.jpg"
 
 
 function Menu(props) {
@@ -30,9 +31,12 @@ function Menu(props) {
                 : <MenuButton handleClick={toggleMenu} color={props.color} />}
 
             {!isMenuOpen ? "" : (
-                <header className={`menu-wrapper_open flex-column ${props.backgroundColor ? colorClass : "background--white"}`}>
+                <header className={`menu-wrapper_open flex-column space-around ${props.backgroundColor ? colorClass : "background--white"}`}>
                     <CloseButton handleClick={toggleMenu} />
-                    <img src={logoName} alt="Christopher Birkenhagen" className="Menu__img" />
+                    <div className="responsive-flex-row page-center portrait__wrapper align-center flex-center">
+                        <div className="portrait"></div>
+                        <img src={logoName} alt="Christopher Birkenhagen" className="Menu__img" />
+                    </div>
                     <div>
                         <Link className="menu__link oswald" to="/home" >HOME</Link>
                         {/* <Link className="menu__link oswald" to="/blog" >BLOG</Link> */}
