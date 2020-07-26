@@ -9,16 +9,22 @@ import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import Preview from "../components/Preview.jsx"
+import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import projects from "../assets/data/projects"
+import ScrollTop from "../components/ScrollTop.jsx"
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+
 
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
 import onlineShopping from "../assets/images/characters/Online shopping-bro-purple.svg"
 import coding from "../assets/images/characters/Coding-bro-purple.svg"
 import downArrow from "../assets/images/icons/arrow-head-black.svg"
+import upArrow from "../assets/images/icons/arrow-up-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
 
-export default function Home() {
+export default function Home(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -42,6 +48,9 @@ export default function Home() {
                     <img src={downArrow} alt="" className="" />
                 </Link>
             </div>
+            <ScrollTop {...props}>
+                <ArrowUpButton color="black" />
+            </ScrollTop>
             <div className="background--yellow--dark">
                 {/* <NavBarSmall midPage={true} /> */}
                 <div className="mid-page yellow--dark" id="home-mid">
@@ -88,6 +97,6 @@ export default function Home() {
                     </footer>
                 </div>
             </div>
-        </main>
+        </main >
     )
 }
