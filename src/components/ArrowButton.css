@@ -1,9 +1,7 @@
-.ArrowButton__wrapper {
+.ArrowButton-wrapper {
     border: #fff3f3 solid .4rem;
     max-width: 25rem;
     margin: 2rem auto;
-    z-index: 100;
-    position: relative;
 }
 .ArrowButton__title{
     color: #412222;
@@ -20,7 +18,7 @@
     margin: 0 auto;
     width: 20%;
 }
-.ArrowButton__wrapper:hover{
+.ArrowButton-wrapper:hover{
     background: #fff3f3;
     border-color: #412222;
     cursor: pointer;

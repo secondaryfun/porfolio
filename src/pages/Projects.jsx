@@ -9,17 +9,13 @@ import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 import projects from "../assets/data/projects"
-import ScrollTop from "../components/ScrollTop.jsx"
-import ArrowUpButton from "../components/ArrowUpButton.jsx"
-
-
 
 
 import projectsVignette from "../assets/images/characters/Organizing projects-pana-mint.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 
-function Projects(props) {
+function Projects() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -40,9 +36,6 @@ function Projects(props) {
                     <img src={downArrow} alt="" className="" />
                 </Link>
             </div>
-            <ScrollTop {...props}>
-                <ArrowUpButton arrowIsBlack={false} />
-            </ScrollTop>
             <div className="mid-page_projects">
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>

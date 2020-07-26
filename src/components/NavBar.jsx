@@ -26,6 +26,8 @@ function NavBar(props) {
                 <img src={logo} alt="Christopher Birkenhagen" className="nav__logo" />
             </Link>
             <div className="nav__link-wrapper nav-bar-margins flex-row hide-on-small">
+                {/* <Link className={`nav__link ${hover} ${match !== "/blog" ? "" : 
+                "Menu__link--underline"}`} style={{ color: textColor }} to="/blog" >BLOG</Link> */}
                 <Link className={`nav__link ${hover} ${match !== "/skills" ? "" :
                     "Menu__link--underline"}`} style={{ color: textColor }} to="/skills" >SKILLS</Link>
                 <Link className={`nav__link ${hover} ${match !== "/projects" ? "" :

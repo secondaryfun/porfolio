@@ -7,10 +7,6 @@ import NavBar from "../components/NavBar.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
-import ScrollTop from "../components/ScrollTop.jsx"
-import ArrowUpButton from "../components/ArrowUpButton.jsx"
-
-
 
 
 import skillsVignette from "../assets/images/characters/JavaScript frameworks-amico-yellow.svg"
@@ -20,7 +16,7 @@ import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-red.svg'
 
-function Skills(props) {
+function Skills() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -40,9 +36,6 @@ function Skills(props) {
                     <img src={downArrow} alt="" className="" />
                 </Link>
             </div>
-            <ScrollTop {...props}>
-                <ArrowUpButton arrowIsBlack={false} />
-            </ScrollTop>
             <div className="mid-page_skills">
                 <div className="mid-page_skills grid-1x1 overflow-x" id="front-end-tech">
                     <div className="grid-position-1 page-center">
