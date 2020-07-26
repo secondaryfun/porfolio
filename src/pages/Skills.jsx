@@ -40,33 +40,70 @@ function Skills() {
                 <div className="mid-page_skills grid-1x1 overflow-x" id="front-end-tech">
                     <div className="grid-position-1 page-center">
                         <div>
-                            <h4 className="mid-page-title headline white">Front-End Technologies</h4>
+                            <h4 className="mid-page-title headline white">Technology</h4>
                             <img src={parallelLine} alt="" className="mid-page_underline " />
                         </div>
                     </div>
                     <div className="flex-row space-around ">
-                        <InfoCard
-                            className="InfoCard-wrapper--orange"
-                            title="Programming Languages"
-                            items={['HTML', 'CSS', 'JavaScript']}
-                        />
-                        <InfoCard
-                            className="InfoCard-wrapper--orange"
-                            title="Libraries & Frameworks"
-                            items={['React', 'Bootstrap']}
-                        />
-                        <InfoCard
-                            className="InfoCard-wrapper--orange"
-                            title="General"
-                            items={["Ubuntu",
-                                "Linux",
-                                "WSL 1&2",
-                                "Git",
-                                "GitHub",
-                                "Heroku",
-                                "Netlify",
-                                "VS Code",]}
-                        />
+                        <div>
+                            <div className="mid-page-title headline white">Front End</div>
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="Programming Languages"
+                                items={['HTML', 'CSS', 'JavaScript']}
+                            />
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="Libraries & Frameworks"
+                                items={['React', 'Bootstrap']}
+                            />
+                        </div>
+                        <div>
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="General"
+                                items={["Ubuntu",
+                                    "Linux",
+                                    "WSL 1&2",
+                                    "Git",
+                                    "GitHub",
+                                    "Heroku",
+                                    "Netlify",
+                                    "VS Code",]}
+                            />
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="Databases"
+                                items={[
+                                    "PostgreSQL ",
+                                    "MongoDB",
+                                ]}
+                            />
+                        </div>
+
+                        <div>
+                            <div className="mid-page-title headline white">Back End</div>
+
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="Languages"
+                                items={[
+                                    "Node.JS",
+                                    "Python",
+                                ]}
+                            />
+                            <InfoCard
+                                className="InfoCard-wrapper--orange"
+                                title="Tech Stack"
+                                items={[
+                                    "Node.JS | Express",
+                                    "Python | Flask | Peewee",
+                                    "Python | Django",
+
+                                ]}
+                            />
+
+                        </div>
                     </div>
                 </div>
                 <div className="mid-page_skills grid-1x1 overflow-x" id="back-end-tech">
@@ -78,31 +115,35 @@ function Skills() {
                             <img alt="" src={laptopTable} className="vignette--small hide-on-small"></img>
                         </div>
                         <div className="flex-row space-around">
-                            <InfoCard
-                                className="InfoCard-wrapper--orange"
-                                title="Technology Stack"
-                                items={[
-                                    "Node.JS/Express/Mongoose",
-                                    "Python/Flask/Peewee",
-                                    "Python/Django",
-                                ]}
-                            />
-                            <InfoCard
-                                className="InfoCard-wrapper--orange"
-                                title="Libraries & Frameworks"
-                                items={[
-                                    "React.JS ",
-                                    "Bootstrap",
-                                ]}
-                            />
-                            <InfoCard
-                                className="InfoCard-wrapper--orange"
-                                title="Databases"
-                                items={[
-                                    "PostgreSQL ",
-                                    "MongoDB",
-                                ]}
-                            />
+                            <div>
+
+                                <InfoCard
+                                    className="InfoCard-wrapper--orange"
+                                    title="Languages"
+                                    items={[
+                                        "Node.JS",
+                                        "Python",
+                                    ]}
+                                />
+                                <InfoCard
+                                    className="InfoCard-wrapper--orange"
+                                    title="Tech Stack"
+                                    items={[
+                                        "Node.JS | Express",
+                                        "Python | Flask | Peewee",
+                                        "Python | Django",
+
+                                    ]}
+                                />
+                                <InfoCard
+                                    className="InfoCard-wrapper--orange"
+                                    title="Databases"
+                                    items={[
+                                        "PostgreSQL ",
+                                        "MongoDB",
+                                    ]}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { useEffect } from 'react'
 
 import './Home.css';
+import '../services/animations.css';
 import NavBar from "../components/NavBar.jsx"
 import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"

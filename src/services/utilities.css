@@ -170,10 +170,19 @@ font-weight: 400;
 /* IMAGES */
 .vignette-wrapper {
     width: 100%;
+    overflow: visible;
+    z-index: 50;
+    position: relative;
+    padding-bottom: 2rem;
 }
 .vignette {
+    object-fit: contain;
     width: 100%;
 }
+.down-arrow {
+    position: relative;
+}
+
 .vignette--small {
     width: 60%;
 }
@@ -256,6 +265,9 @@ font-weight: 400;
     .page-center {
         top: 60rem;
     }
+    .vignette-wrapper {
+        width: 30%;
+    }
     .vignette--small {
         height: 30rem;
         width: 30rem;
@@ -268,4 +280,5 @@ font-weight: 400;
         margin: 3rem auto;
         box-shadow: 15px -15px 15px rgba(0, 0, 0, .3);
     }
+    
 }
