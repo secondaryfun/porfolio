@@ -12,15 +12,12 @@ import Preview from "../components/Preview.jsx"
 import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import projects from "../assets/data/projects"
 import ScrollTop from "../components/ScrollTop.jsx"
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
 import onlineShopping from "../assets/images/characters/Online shopping-bro-purple.svg"
 import coding from "../assets/images/characters/Coding-bro-purple.svg"
 import downArrow from "../assets/images/icons/arrow-head-black.svg"
-import upArrow from "../assets/images/icons/arrow-up-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
 
@@ -42,14 +39,14 @@ export default function Home(props) {
                     <p className="mid-page-text" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
                 </div>
                 <div className="vignette-wrapper">
-                    <img src={homeVignette} alt="Chris At Work" className="home-vignette vignette" />
+                    <img src={homeVignette} alt="Chris At Work" className="home__vignette vignette" />
                 </div>
                 <Link className="down-arrow " to='#home-mid'>
                     <img src={downArrow} alt="" className="" />
                 </Link>
             </div>
             <ScrollTop {...props}>
-                <ArrowUpButton color="black" />
+                <ArrowUpButton arrowIsBlack={true} />
             </ScrollTop>
             <div className="background--yellow--dark">
                 {/* <NavBarSmall midPage={true} /> */}

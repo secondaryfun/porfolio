@@ -8,8 +8,8 @@ import arrowWhite from "../assets/images/icons/arrow-up-white.svg"
 
 function ArrowUpButton(props) {
     const [arrowIsBlack, setArrowIsBlack] = useState(props.arrowIsBlack)
-    const [arrowColor, setArrowColor] = useState(props.arrowIsBlack)
-    const [background, setBackground] = useState(props.arrowIsBlack)
+    const [arrowColor, setArrowColor] = useState()
+    const [background, setBackground] = useState()
 
     useEffect(() => {
         if (arrowIsBlack === false) {

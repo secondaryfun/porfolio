@@ -14,10 +14,10 @@
     font-weight: 700;
     color: #FFF3F3;
 }
-.NavBar__white:hover {
+.NavBar__hover--white:hover {
     border-bottom: #FFF3F3 solid 5px;
 }
-.NavBar__black:hover {
+.NavBar__hover--black:hover {
     border-bottom: #412222 solid 5px;
 }
 .nav__logo {

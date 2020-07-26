@@ -10,13 +10,12 @@
 }
 .InfoCard-title {
     width: 100%;
-    height: 5.5rem;
     vertical-align: bottom;
+    font-size: 2.5rem;
     line-height: 2.5rem;
-    font-size: 2rem;
     letter-spacing: .2rem;
     font-weight: 700;
-    border-bottom: #FFF3F3 solid 4px;
+    margin-bottom: 1.5rem;
 }
 .InfoCard__list-item {
     min-width: 25rem;
@@ -27,18 +26,18 @@
     padding-left: 2rem;
 }
 
-@media screen and (min-width : 760px) {
+@media screen and (min-width : 450px) {
     .InfoCard-title {
-        min-width: 25rem;
+        width: 18rem;
         font-size: 2.5rem;
     }.InfoCard__list-item {
-        font-size: 2.5rem;
+        font-size: 2rem;
         /* line-height: 9rem; */
     }
 }
 @media screen and (min-width : 1200px) {
     .InfoCard-title {
-        min-width: 30rem;
+        min-width: 25rem;
         font-size: 4rem;
         height: 8rem;
     line-height: 3.5rem;
