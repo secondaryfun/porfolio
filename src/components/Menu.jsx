@@ -10,7 +10,6 @@ import SocialMedia from './SocialMedia.jsx'
 
 import contact from "../assets/images/characters/Get-in-touch-bro-green.svg"
 import logoName from "../assets/images/icons/logo-name-black.svg"
-import chris from "../assets/images/characters/Chris-600.jpg"
 
 
 function Menu(props) {

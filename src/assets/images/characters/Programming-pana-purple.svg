@@ -102,7 +102,7 @@
 			from="0 210 210"
 			to="14 140 250" 
 			dur="2s"
-			begin="0s;l2.end+2.4s"
+			begin="1.5s;l2.end+2.4s"
 			repeatCount="1"
 			fill="freeze" 
 			/>
