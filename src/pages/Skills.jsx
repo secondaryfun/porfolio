@@ -136,7 +136,7 @@ function Skills(props) {
                             <InfoCard
                                 className=""
                                 title="Tech"
-                                items={['Google Apps Scripting', 'Advanced Excel', 'Stitch Labs', 'Monday.com', 'Trello', 'Basecamp']}
+                                items={['Advanced Excel', 'Google Apps Scripting', 'Monday.com', 'Trello', 'Basecamp', 'Stitch Labs', 'Shopify']}
                             />
                         </div>
                     </div>
