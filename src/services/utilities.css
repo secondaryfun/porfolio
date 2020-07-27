@@ -149,6 +149,7 @@ font-weight: 400;
 }
 .mid-page_underline {
     margin-bottom: 2rem;
+    height: 3rem;
 }
 .page-runout {
     width: 100%;
