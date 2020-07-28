@@ -31,7 +31,7 @@ function Skills(props) {
         }
     }, [])
     return (
-        <main className="max-size">
+        <main className="main__wrapper">
             <div className="full-screen skills-wrapper page-wrapper" id="top">
                 <NavBar color={'white'} />
                 <div>

@@ -31,7 +31,7 @@ function Projects(props) {
     }, [])
 
     return (
-        <main className="max-size">
+        <main className="main__wrapper">
             <div className="full-screen projects-wrapper page-wrapper" id="top">
                 <NavBar color={'white'} />
 

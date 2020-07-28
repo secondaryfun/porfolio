@@ -12,3 +12,9 @@
         width: 60vw;
     }
 }
+
+@media screen and (min-width : 1900px) {
+    .Resume__iframe {
+        width: 30vw;
+    }
+}

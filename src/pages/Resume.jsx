@@ -20,7 +20,7 @@ function Resume(props) {
     }, [])
 
     return (
-        <main className="max-size">
+        <main className="main__wrapper">
             <div className="full-screen page-wrapper" id="top">
                 <NavBar backgroundColor={true} />
                 <iframe src={resumeLink} className="Resume__iframe page-center" title="Chris Birkenhagen Resume"></iframe>
