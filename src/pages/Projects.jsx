@@ -30,14 +30,16 @@ function Projects(props) {
 
     return (
         <main className="max-size">
-            <div className="full-screen projects-wrapper " id="top">
+            <div className="full-screen projects-wrapper page-wrapper" id="top">
                 <NavBar color={'white'} />
-                <div className="projects__quote" >
-                    <div className="mid-page-callout oswald bold white">Personal Projects</div>
-                    <p className="mid-page-text white" >I am always doing that which I cannot do, in order that I may learn how to do it.</p>
-                    <p className="mid-page-text white">-= Pablo Picasso =- </p>
-                </div>
 
+                <div className="projects__quote" >
+                    <div className="mid-page-callout oswald bold white margin-3">Personal Projects</div>
+                    <p className="mid-page-text white left" >I am always doing that which I cannot do, in order that I may learn how to do it.  - Pablo Picasso</p>
+                </div>
+                <Link className="down-arrow " to='#mid-page-projects'>
+                    <img src={downArrow} alt="" className="" />
+                </Link>
             </div>
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={false} />
@@ -45,7 +47,7 @@ function Projects(props) {
             <div className="mid-page_projects">
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>
-                        <h4 className="mid-page-title headline white"> Projects</h4>
+                        <h4 className="mid-page-title headline white">Select Projects</h4>
                         <img src={parallelLine} alt="" className="mid-page_underline " />
                     </div>
                     {!projects ? "" : projects.map((project, index) => {

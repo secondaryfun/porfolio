@@ -64,7 +64,7 @@ function Skills(props) {
                         <InfoCard
                             className=""
                             title="Libraries & Frameworks"
-                            items={['React', 'Django']}
+                            items={['React', 'Django', 'Express']}
                         />
                         <InfoCard
                             className=""
@@ -104,6 +104,7 @@ function Skills(props) {
                                 "Node.JS | Express",
                                 "Python | Flask | Peewee",
                                 "Python | Django",
+                                "MERN: MongoDB | Express | React | NodeJS"
                             ]}
                         />
 

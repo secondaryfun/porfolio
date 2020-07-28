@@ -187,6 +187,7 @@ font-weight: 400;
 }
 .down-arrow {
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .vignette--small {
