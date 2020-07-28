@@ -15,10 +15,10 @@ import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
 
 
-function initializeReactGA() {
+(function initializeReactGA() {
 	ReactGA.initialize('UA-173593293-1');
 	ReactGA.pageview('/homepage');
-}
+})()
 
 function App(props) {
 
