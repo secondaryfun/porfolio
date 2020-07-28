@@ -46,7 +46,7 @@ function Projects(props) {
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={false} />
             </ScrollTop>
-            <div className="mid-page_projects">
+            <div className="mid-page_projects padding-2">
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>
                         <h4 className="mid-page-title headline white">Select Projects</h4>
