@@ -5,9 +5,11 @@ import './ProjectDetail.css';
 import NavBarSmall from "../components/NavBarSmall.jsx"
 import ProjectStats from "../components/ProjectStats.jsx"
 import { PageView, initGA } from '../components/Tracking';
+import projects from "../assets/data/projects"
+
 
 function ProjectDetail(props) {
-    const proj = !props.location.state ? "" : props.location.state.project
+    const proj = !props.location.state ? props.project : props.location.state.project
     const [project] = useState(proj)
 
     useEffect(() => {
@@ -38,3 +40,7 @@ function ProjectDetail(props) {
 }
 
 export default ProjectDetail;
+
+ProjectDetail.defaultProps = {
+    project: projects[0]
+};
