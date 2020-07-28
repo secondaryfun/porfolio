@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import './Resume.css';
 import NavBar from "../components/NavBar.jsx"
-
+import { PageView, initGA } from '../components/Tracking';
 
 
 function Resume(props) {
@@ -12,6 +12,8 @@ function Resume(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }

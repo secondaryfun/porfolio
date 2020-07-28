@@ -19,11 +19,13 @@ import laptopTable from "../assets/images/characters/character-laptop-table.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-red.svg'
-
+import { PageView, initGA } from '../components/Tracking';
 function Skills(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }

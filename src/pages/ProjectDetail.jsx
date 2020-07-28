@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import './ProjectDetail.css';
 import NavBarSmall from "../components/NavBarSmall.jsx"
 import ProjectStats from "../components/ProjectStats.jsx"
-
+import { PageView, initGA } from '../components/Tracking';
 
 function ProjectDetail(props) {
     const proj = !props.location.state ? "" : props.location.state.project
@@ -12,6 +12,8 @@ function ProjectDetail(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }

@@ -5,7 +5,6 @@ import {
 	Switch,
 	Redirect,
 } from 'react-router-dom';
-import ReactGA from 'react-ga'
 import './App.css';
 import './services/utilities.css';
 import Home from './pages/Home';
@@ -13,14 +12,21 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
+import { useEffect } from 'react'
+import { PageView, initGA } from './components/Tracking';
 
 
-(function initializeReactGA() {
-	ReactGA.initialize('UA-173593293-1');
-	ReactGA.pageview('/homepage');
-})()
+
 
 function App(props) {
+
+	useEffect(() => {
+		initGA()
+		PageView()
+		return () => {
+
+		}
+	}, [])
 
 	return (
 		<Router>

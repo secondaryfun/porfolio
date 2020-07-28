@@ -21,10 +21,15 @@ import downArrow from "../assets/images/icons/arrow-head-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
 
+import { PageView, initGA } from '../components/Tracking';
+
+
 export default function Home(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }

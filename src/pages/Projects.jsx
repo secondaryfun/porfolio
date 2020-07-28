@@ -18,11 +18,13 @@ import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import projectsVignette from "../assets/images/characters/Organizing projects-pana-mint.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
-
+import { PageView, initGA } from '../components/Tracking';
 function Projects(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }
