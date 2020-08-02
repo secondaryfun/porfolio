@@ -21,7 +21,7 @@ function NavBar(props) {
     }
 
     return (
-        <nav className={`nav-wrapper flex-row space-between sticky hide-on-small ${props.className}`}>
+        <nav className={`nav-wrapper flex-row space-between hide-on-small ${props.className}`}>
             <Link to="/" >
                 <img src={logo} alt="Christopher Birkenhagen" className="nav__logo" />
             </Link>
