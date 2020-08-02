@@ -1,6 +1,13 @@
 .projects-wrapper {
     background-image: url('../assets/images/backgrounds/horizon-blue.svg');
 }
+.projects__quote {
+    width: 85%;
+    margin: 8rem auto;
+}
+.projects__quote div, .projects__quote p {
+    margin-bottom: 2rem;
+}
 .mid-page_projects {
     background: #0E2FB3;
 }
@@ -41,6 +48,9 @@
 }
 @media screen and (min-width : 600px) {
     .mid-page-project__title {
+        width: 50%;
+    }
+    .projects__quote {
         width: 50%;
     }
     

@@ -22,11 +22,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endCo
     line-height: 8rem;
     font-size: 8rem;
 }
-.vignette--home {
-    position: relative;
-    bottom: 12rem;
-    z-index: 101;
-}
+
 
 @media screen and (min-width : 540px) {
     .mid-page_home__title {

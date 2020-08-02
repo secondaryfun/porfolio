@@ -6,7 +6,10 @@
 }
 .InfoCard-wrapper--orange {
     background: #F75D3B;
-
+}
+.Skills__triangle {
+    background: url('../assets/images/backgrounds/background-bottom-red.svg');
+    height: 100vh;
 }
 .page-runout--red {
     background: rgb(255,255,255);

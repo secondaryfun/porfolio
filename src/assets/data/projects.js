@@ -14,6 +14,20 @@ const projects = [
     },
     {
         id: 2,
+        title: "Inkyy Rocketship Website",
+        description: "A website skeleton build in HTML and CSS. No Javascript allows on this mockup. Built from an Adobe XD design by Inkyy.com.",
+        items: [
+            "HTML & CSS Implementation",
+            "Game Logic",
+            "Development",
+            "Stat Design"
+        ],
+        tech: ["HTML | CSS"],
+        link: "https://secondaryfun.github.io/Inkyy-Rocketship-Website/",
+        github: "https://github.com/secondaryfun/Inkyy-Rocketship-Website",
+    },
+    {
+        id: 2,
         title: "Boo-Booty Checkers",
         description: "2-Player Checkers with a training mode.",
         items: [
@@ -27,8 +41,8 @@ const projects = [
     },
     {
         id: 3,
-        title: "DnD Spellbook",
-        description: "React App that serves up DnD spells from the web.  Checkout the alternate view for some fun with CSS.",
+        title: "API Slider - DnD Spellbook",
+        description: "React App that serves up DnD spells from a web API.  Checkout the alternate view for some fun with CSS. ",
         items: [
             "Visual Design",
             "API Connection",
@@ -40,7 +54,7 @@ const projects = [
         github: "https://github.com/secondaryfun/DnD-Spellbook-with-React"
     },
     {
-        id: 4,
+        id: 5,
         title: "Game of War",
         description: "It's the card game war, played in your browser's console. Start the game in the console with 'war.runGame(true)', or run multiple games at once so see the stats:  'war.runGame(false,10)'.  false = do not show turns / 10 = # of games. Follow the link to the left to play. The game does not work in an iFrame.",
         items: [
@@ -53,20 +67,7 @@ const projects = [
         link: "https://secondaryfun.github.io/game-of-war/",
         github: "https://github.com/secondaryfun/game-of-war",
     },
-    {
-        id: 5,
-        title: "Inkyy Rocketship Website",
-        description: "A website skeleton build in HTML and CSS. No Javascript allows on this mockup. Built from an Adobe XD design by Inkyy.com.",
-        items: [
-            "HTML & CSS Implementation",
-            "Game Logic",
-            "Development",
-            "Stat Design"
-        ],
-        tech: ["HTML | CSS"],
-        link: "https://secondaryfun.github.io/Inkyy-Rocketship-Website/",
-        github: "https://github.com/secondaryfun/Inkyy-Rocketship-Website",
-    }
+
 
 
 ]

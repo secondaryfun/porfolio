@@ -18,23 +18,26 @@ import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import projectsVignette from "../assets/images/characters/Organizing projects-pana-mint.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
-
+import { PageView, initGA } from '../components/Tracking';
 function Projects(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        initGA()
+        PageView()
         return () => {
 
         }
     }, [])
 
     return (
-        <main className="max-size">
+        <main className="main__wrapper">
             <div className="full-screen projects-wrapper page-wrapper" id="top">
                 <NavBar color={'white'} />
 
-                <div className="vignette-wrapper">
-                    <img src={projectsVignette} alt="Chris At Work" className="projects-vignette vignette" />
+                <div className="projects__quote" >
+                    <div className="mid-page-callout oswald bold white margin-3">Personal Projects</div>
+                    <p className="mid-page-text white left" >I am always doing that which I cannot do, in order that I may learn how to do it.  - Pablo Picasso</p>
                 </div>
                 <Link className="down-arrow " to='#mid-page-projects'>
                     <img src={downArrow} alt="" className="" />
@@ -43,7 +46,7 @@ function Projects(props) {
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={false} />
             </ScrollTop>
-            <div className="mid-page_projects">
+            <div className="mid-page_projects padding-2">
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>
                         <h4 className="mid-page-title headline white">Select Projects</h4>

@@ -21,6 +21,9 @@
     border-radius: .5rem;
     cursor: pointer;
 }
+.Menu__link--underline {
+    border-bottom: 5px solid;
+}
 .Menu__img {
     margin-bottom: 2rem;
     width: 100%;

@@ -2,6 +2,9 @@
     width: 100vw;
     height: 80vh;
 }
+.Resume__link {
+    font-size: 2.5rem;
+}
 @media screen and (min-width : 480px) {
     .Resume__iframe {
         width: 80vw;
@@ -10,5 +13,11 @@
 @media screen and (min-width : 1600px) {
     .Resume__iframe {
         width: 60vw;
+    }
+}
+
+@media screen and (min-width : 1900px) {
+    .Resume__iframe {
+        width: 30vw;
     }
 }
