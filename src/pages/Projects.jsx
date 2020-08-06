@@ -21,9 +21,10 @@ import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import { PageView, initGA } from '../components/Tracking';
 function Projects(props) {
+    const page = 'projects'
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        handleScroll(page, 'top')
         initGA()
         PageView()
         return () => {
@@ -32,15 +33,15 @@ function Projects(props) {
     }, [])
 
     return (
-        <main className="main__wrapper" id='projectPage'>
+        <main className="main__wrapper" id='projectsPage'>
             <div className="full-screen projects-wrapper page-wrapper" id="top">
-                <NavBar color={'white'} page="projects" />
+                <NavBar color={'white'} page={page} />
 
                 <div className="projects__quote" >
                     <div className="mid-page-callout oswald bold white margin-3">Personal Projects</div>
                     <p className="mid-page-text white left" >I am always doing that which I cannot do, in order that I may learn how to do it.  - Pablo Picasso</p>
                 </div>
-                <div className="down-arrow " onClick={handleScroll}>
+                <div className="down-arrow " onClick={() => handleScroll(page)}>
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>

@@ -26,8 +26,9 @@ import { PageView, initGA } from '../components/Tracking';
 
 
 export default function Home(props) {
+    const page = 'home'
     useEffect(() => {
-        window.scrollTo(0, 0)
+        handleScroll(page, 'top')
         initGA()
         PageView()
 
@@ -40,7 +41,7 @@ export default function Home(props) {
     return (
         <main className="main__wrapper" onScroll={handleScroll} id='homePage'>
             <div className="full-screen home-wrapper page-wrapper" id="top" onScroll={handleScroll}>
-                <NavBar page="home" />
+                <NavBar page={page} />
                 <div>
                     <div className="mid-page-callout oswald bold ">Christopher Birkenhagen</div>
                     <p className="mid-page-text" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
@@ -48,7 +49,7 @@ export default function Home(props) {
                 <div className="vignette-wrapper">
                     <img src={homeVignette} alt="Chris At Work" className="home__vignette vignette" />
                 </div>
-                <div className="down-arrow pointer" onClick={() => handleScroll()}>
+                <div className="down-arrow pointer" onClick={() => handleScroll(page)}>
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>

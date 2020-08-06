@@ -81,7 +81,7 @@ const App = (props) => {
 			<Route path="/skills" exact component={() => Slider(1)} />
 			<Route path="/projects" exact component={() => Slider(2)} />
 			<Route path="/resume" exact component={() => Slider(3)} />
-			<Route path="/project-detail" exact component={() => ProjectDetail()} />
+			<Route path="/project-detail" exact component={ProjectDetail} />
 
 		</Provider>
 

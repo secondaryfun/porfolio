@@ -23,9 +23,10 @@ import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-red.svg'
 import { PageView, initGA } from '../components/Tracking';
 function Skills(props) {
+    const page = 'skills'
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        handleScroll(page, 'top')
         initGA()
         PageView()
         return () => {
@@ -35,7 +36,7 @@ function Skills(props) {
     return (
         <main className="main__wrapper" id='skillsPage'>
             <div className="full-screen skills-wrapper page-wrapper" id="top">
-                <NavBar color={'white'} page="skills" />
+                <NavBar color={'white'} page={page} />
                 <div>
                     <div className="mid-page-callout oswald bold white hide-on-large">Skillset</div>
                     <p className="mid-page-text white" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
@@ -43,7 +44,7 @@ function Skills(props) {
                 <div className="vignette-wrapper">
                     <img src={skillsVignette} alt="Chris At Work" className=" vignette" />
                 </div>
-                <div className="down-arrow " onClick={handleScroll}>
+                <div className="down-arrow " onClick={() => handleScroll(page)}>
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>
