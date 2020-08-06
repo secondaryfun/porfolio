@@ -1,0 +1,12 @@
+.ScrollTop__wrapper {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 1000;
+}
+
+@media screen and (min-width : 1900px) {
+    .ScrollTop__wrapper {
+        right: 22%;
+    }
+}

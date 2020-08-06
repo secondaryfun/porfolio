@@ -78,6 +78,7 @@ const App = (props) => {
 			<Redirect path="/" exact to="/home" />
 			<Redirect path="" exact to="/home" />
 			<Route path="/home" exact component={() => Slider(0)} />
+			{/* <Route path="/home" exact component={Home} /> */}
 			<Route path="/skills" exact component={() => Slider(1)} />
 			<Route path="/projects" exact component={() => Slider(2)} />
 			<Route path="/resume" exact component={() => Slider(3)} />

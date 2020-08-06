@@ -1,5 +1,6 @@
 import React from 'react';
 import './ArrowUpButton.css';
+import '../services/utilities.css';
 import { useState, useEffect } from 'react'
 
 
@@ -14,10 +15,10 @@ function ArrowUpButton(props) {
     useEffect(() => {
         if (arrowIsBlack === false) {
             setArrowColor(arrowWhite)
-            setBackground('ArrowUpButton__background-black')
+            setBackground('background--black')
         } else {
             setArrowColor(arrowBlack)
-            setBackground('ArrowUpButton__background-white')
+            setBackground('background--white')
         }
     }, [arrowIsBlack])
 

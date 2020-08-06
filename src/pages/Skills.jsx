@@ -48,9 +48,7 @@ function Skills(props) {
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>
-            <ScrollTop {...props}>
-                <ArrowUpButton arrowIsBlack={false} />
-            </ScrollTop>
+            <ScrollTop {...props} btnIsBlack={false} page={page} />
             <div className="mid-page mid-page_skills">
                 <div className="mid-page_skills grid-1x1 overflow-x" id="front-end-tech">
                     <div className="grid-position-1 page-center">

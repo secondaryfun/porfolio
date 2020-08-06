@@ -45,9 +45,7 @@ function Projects(props) {
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>
-            <ScrollTop {...props}>
-                <ArrowUpButton arrowIsBlack={false} />
-            </ScrollTop>
+            <ScrollTop {...props} btnIsBlack={false} page={page} />
             <div className="mid-page_projects padding-2">
                 <div className="mid-page_projects " id="mid-page-projects">
                     <div>

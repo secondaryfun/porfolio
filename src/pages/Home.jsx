@@ -53,9 +53,7 @@ export default function Home(props) {
                     <img src={downArrow} alt="" className="" />
                 </div>
             </div>
-            <ScrollTop {...props}>
-                <ArrowUpButton arrowIsBlack={true} />
-            </ScrollTop>
+            <ScrollTop {...props} btnIsBlack={true} page={page} />
             <div className="background--yellow--dark">
                 {/* <NavBarSmall midPage={true} /> */}
                 <div className="mid-page yellow--dark" id="home-mid">

@@ -5,18 +5,26 @@ export default function handleScroll(page, target) {
         behavior: 'smooth',
     }
     const scrollDivs = document.querySelectorAll('.slide-page')
-    // scrollDivs[scrollDivs.length - 1].scrollTo(scrollOptions)
-    window.scrollTo(scrollOptions)
-    let pageids
+    let match = null
     scrollDivs.forEach((div, i) => {
         const node = div.childNodes[0].id
         const pg = page + "Page"
-        console.log(`node= ${node} pg= ${pg}`)
         if (node === pg) {
-            console.log(`match = ${i}`)
             scrollDivs[i].scrollTo(scrollOptions)
         }
     })
+}
 
-    console.log(scrollDivs)
+export const getScrollingDiv = (page) => {
+    const scrollDivs = document.querySelectorAll('.slide-page')
+    let match = null
+    scrollDivs.forEach((div, i) => {
+        const node = div.childNodes[0].id
+        const pg = page + "Page"
+        if (node === pg) {
+            match = scrollDivs[i]
+        }
+    })
+
+    return match
 }
