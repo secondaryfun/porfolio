@@ -20,9 +20,9 @@ function Resume(props) {
     }, [])
 
     return (
-        <main className="main__wrapper">
+        <main className="main__wrapper resume__wrapper" id="resumePage">
             <div className="full-screen padding-2" id="top">
-                <NavBar backgroundColor={true} />
+                <NavBar backgroundColor={true} page="resume" />
                 <div className="Resume__link__wrapper page-center">
                     <a
                         href="https://docs.google.com/document/d/10dKFkaYYcR4rsMwazfmztfZQ6fjOe6LjVa354-rAcjc/edit?usp=sharing"

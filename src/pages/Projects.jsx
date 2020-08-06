@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 
 
 import './Projects.css';
+import handleScroll from '../services/services.js'
+
 import NavBar from "../components/NavBar.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
@@ -15,7 +17,6 @@ import ArrowUpButton from "../components/ArrowUpButton.jsx"
 
 
 
-import projectsVignette from "../assets/images/characters/Organizing projects-pana-mint.svg"
 import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import { PageView, initGA } from '../components/Tracking';
@@ -31,17 +32,17 @@ function Projects(props) {
     }, [])
 
     return (
-        <main className="main__wrapper">
+        <main className="main__wrapper" id='projectPage'>
             <div className="full-screen projects-wrapper page-wrapper" id="top">
-                <NavBar color={'white'} />
+                <NavBar color={'white'} page="projects" />
 
                 <div className="projects__quote" >
                     <div className="mid-page-callout oswald bold white margin-3">Personal Projects</div>
                     <p className="mid-page-text white left" >I am always doing that which I cannot do, in order that I may learn how to do it.  - Pablo Picasso</p>
                 </div>
-                <Link className="down-arrow " to='#mid-page-projects'>
+                <div className="down-arrow " onClick={handleScroll}>
                     <img src={downArrow} alt="" className="" />
-                </Link>
+                </div>
             </div>
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={false} />

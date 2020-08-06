@@ -1,3 +1,7 @@
+.resume__wrapper {
+    background: white;
+}
+
 .Resume__iframe {
     width: 100vw;
     height: 80vh;

@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 import './Home.css';
 import '../services/animations.css';
+import handleScroll from '../services/services.js'
 import NavBar from "../components/NavBar.jsx"
 import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
@@ -25,20 +26,21 @@ import { PageView, initGA } from '../components/Tracking';
 
 
 export default function Home(props) {
-
     useEffect(() => {
         window.scrollTo(0, 0)
         initGA()
         PageView()
+
+
         return () => {
 
         }
     }, [])
 
     return (
-        <main className="main__wrapper">
-            <div className="full-screen home-wrapper page-wrapper" id="top">
-                <NavBar />
+        <main className="main__wrapper" onScroll={handleScroll} id='homePage'>
+            <div className="full-screen home-wrapper page-wrapper" id="top" onScroll={handleScroll}>
+                <NavBar page="home" />
                 <div>
                     <div className="mid-page-callout oswald bold ">Christopher Birkenhagen</div>
                     <p className="mid-page-text" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
@@ -46,9 +48,9 @@ export default function Home(props) {
                 <div className="vignette-wrapper">
                     <img src={homeVignette} alt="Chris At Work" className="home__vignette vignette" />
                 </div>
-                <Link className="down-arrow " to='#home-mid'>
+                <div className="down-arrow pointer" onClick={() => handleScroll()}>
                     <img src={downArrow} alt="" className="" />
-                </Link>
+                </div>
             </div>
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={true} />

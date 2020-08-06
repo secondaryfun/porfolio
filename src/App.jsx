@@ -1,23 +1,20 @@
 import React from 'react';
 import {
-	BrowserRouter as Router,
 	Route,
-	Switch,
 	Redirect,
 } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
+
 import './App.css';
 import './services/utilities.css';
 
 import AwesomeSlider from "react-awesome-slider"
-import coreStyles from 'react-awesome-slider/src/core/styles.scss'
 import 'react-awesome-slider/dist/styles.css';
 import animationStyles from 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 
 
 import {
 	Provider,
-	Link,
-	withNavigationContext,
 	withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
 
@@ -31,46 +28,11 @@ import Resume from './pages/Resume';
 const NavigationSlider = withNavigationHandlers(AwesomeSlider);
 
 // Create an AwesomeSlider instance with some content
-const Slider = () => {
+const Slider = (startPage = 0) => {
+	// console.log(starPage)
 	return (
 		<NavigationSlider
 			className="awesome-slider"
-			cssModule={[coreStyles, animationStyles]}
-			bullets={false}
-			media={[
-				{
-					slug: "home",
-					className: "home",
-					children: () => (
-						<div className="ras-sectioned">
-							<div className="ras-page">
-								<div className="ras-section">
-									<Home />
-								</div>
-							</div>
-						</div>
-					)
-				},
-				{
-					slug: "skills",
-					className: "skills",
-					children: () => (
-						<div className="ras-sectioned">
-							<div className="ras-page">
-								<Skills />
-							</div>
-						</div>
-					)
-				},
-
-			]}
-		/>
-	)
-}
-
-const pageSlider = () => {
-	return (
-		<AwesomeSlider
 			animation="cubeAnimation"
 			cssModule={[animationStyles]}
 			bullets={false}
@@ -79,60 +41,51 @@ const pageSlider = () => {
 			infinite={true}
 			startup={true}
 			mobileTouch={true}
+			selected={startPage}
+			media={[
+				{
+					slug: "home",
+					className: "slide-page",
+					children: <Home />
+				},
+				{
+					slug: "skills",
+					className: "slide-page",
+					children: <Skills />
+				},
+				{
+					slug: "projects",
+					className: "slide-page",
+					children: <Projects />
+				},
+				{
+					slug: "resume",
+					className: "slide-page",
+					children: <Resume />
+				},
 
-		>
-			<div className="slide-page">
-				<Home />
-			</div>
-			<div className="slide-page">
-				<Skills />
-			</div>
-
-			<div className="slide-page">{
-				<Projects />
-			}</div>
-			<div className="slide-page">{
-				<Resume />
-			}</div>
-
-
-
-
-		</AwesomeSlider>
-	)
-}
-
-// Page header navigation
-const Header = () => {
-	return (
-		<Header>
-			<nav>
-				<Link href="page-one">Page One</Link>
-				<Link href="page-two">Page Two</Link>
-				<Link href="page-three">Page Two</Link>
-			</nav>
-		</Header>
+			]}
+		/>
 	)
 }
 
 const App = (props) => {
+	const slug = useRouteMatch().path
+
 
 	return (
-		<Router>
-			<Switch>
+		<Provider slug={slug}>
+			<Redirect path="/" exact to="/home" />
+			<Redirect path="" exact to="/home" />
+			<Route path="/home" exact component={() => Slider(0)} />
+			<Route path="/skills" exact component={() => Slider(1)} />
+			<Route path="/projects" exact component={() => Slider(2)} />
+			<Route path="/resume" exact component={() => Slider(3)} />
+			<Route path="/project-detail" exact component={() => ProjectDetail()} />
 
-				<Route path="/" exact render={pageSlider} />
-				<Route path="/home" exact component={Home} />
-				<Route path="/skills" exact component={Skills} />
-				<Route path="/projects" exact component={Projects} />
-				<Route path="/project-detail" exact component={ProjectDetail} />
-				<Route path="/resume" exact component={Resume} />
-
-			</Switch>
-		</Router>
-
+		</Provider>
 
 	);
 }
 
-export default App;
+export default App; 

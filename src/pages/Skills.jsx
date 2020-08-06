@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 
 import './Skills.css';
+import handleScroll from '../services/services.js'
+
 import NavBar from "../components/NavBar.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
@@ -31,9 +33,9 @@ function Skills(props) {
         }
     }, [])
     return (
-        <main className="main__wrapper">
+        <main className="main__wrapper" id='skillsPage'>
             <div className="full-screen skills-wrapper page-wrapper" id="top">
-                <NavBar color={'white'} />
+                <NavBar color={'white'} page="skills" />
                 <div>
                     <div className="mid-page-callout oswald bold white hide-on-large">Skillset</div>
                     <p className="mid-page-text white" >Full-Stack Developer. Operations Guru. Entrepreneur.</p>
@@ -41,9 +43,9 @@ function Skills(props) {
                 <div className="vignette-wrapper">
                     <img src={skillsVignette} alt="Chris At Work" className=" vignette" />
                 </div>
-                <Link className="down-arrow " to='#front-end-tech'>
+                <div className="down-arrow " onClick={handleScroll}>
                     <img src={downArrow} alt="" className="" />
-                </Link>
+                </div>
             </div>
             <ScrollTop {...props}>
                 <ArrowUpButton arrowIsBlack={false} />
