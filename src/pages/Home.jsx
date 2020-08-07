@@ -92,10 +92,10 @@ export default function Home(props) {
                         page={page} />
                     <img alt="" src={onlineShopping} className={`vignette--small hover-opacity
                         grid-position-1 z-index-top margin-3 hide-on-small opacity--0 
-                        ${showCurrentProjects ? "load--slow-opacity load--slow-delay-1" : ""}`} ></img>
+                        ${showCurrentProjects ? "load--slow-opacity load--slow-delay-1" : "close--slow-opacity"}`} ></img>
                     <img alt="" src={coding} className={`vignette--small  hover-opacity
                         grid-position-1 grid-end margin-3 hide-on-small opacity--0 
-                        ${showCurrentProjects ? "load--slow-opacity load--slow-delay-1-5" : ""}`}></img>
+                        ${showCurrentProjects ? "load--slow-opacity load--slow-delay-1-5" : "close--slow-opacity"}`}></img>
                     <Preview title={projects[0].title} project={projects[0]} id="preview-1"
                         className={"grid-position-1 z-index-top grid-end hide-on-small "}
                     />
