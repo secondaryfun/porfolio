@@ -3,6 +3,7 @@
     height: 35rem;
     width: 35rem;
     padding: 3rem;
+    margin-right: 3rem;
 }
 .Preview__wrapper {
     background: rgba(0,0,0,.75);
@@ -60,24 +61,4 @@
 .Preview__close .Preview__wrapper {
     transform: scaleY(0);
     animation: shrinkFromCenterline .5s ease-out;
-}
-@keyframes growFromCenterline {
-    100% {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    0% {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-}
-@keyframes shrinkFromCenterline {
-    0% {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scaleY(0);
-    }
 }

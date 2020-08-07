@@ -1,8 +1,8 @@
 import React from 'react';
-import { useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 import './Skills.css';
-import handleScroll from '../services/services.js'
+import handleScroll, { getScrollingDiv } from '../services/services.js'
 
 import NavBar from "../components/NavBar.jsx"
 import ArrowDownButton from "../components/ArrowDownButton.jsx"
@@ -10,6 +10,7 @@ import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 import ScrollTop from "../components/ScrollTop.jsx"
+import PageSplitter from "../components/PageSplitter.jsx"
 
 import skillsVignette from "../assets/images/characters/JavaScript frameworks-amico-yellow.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
@@ -17,14 +18,42 @@ import { PageView, initGA } from '../components/Tracking';
 function Skills(props) {
     const page = 'skills'
 
+    const [scrollDiv, setScrollDiv] = useState()
+    const [showCurrentProjects, setShowCurrentProjects] = useState(false)
+
+
+
+    const hideOnScroll = useCallback(
+        () => {
+            let navHeight = scrollDiv?.scrollTop
+            let elementHeight = document.querySelector('.mid-page_skills').getBoundingClientRect().top
+            let activationHeight = elementHeight
+            // console.log(elementHeight)
+            if (navHeight > activationHeight) loadCurrProj()
+            if (navHeight < activationHeight) hideCurrProj()
+        },
+        [scrollDiv],
+    )
+
+    const loadCurrProj = () => {
+        setShowCurrentProjects(true)
+    }
+
+    const hideCurrProj = () => {
+        setShowCurrentProjects(false)
+    }
     useEffect(() => {
         handleScroll(page, 'top')
         initGA()
         PageView()
-        return () => {
-
+        setScrollDiv(getScrollingDiv(page))
+        if (scrollDiv) {
+            scrollDiv.addEventListener('scroll', (e) => hideOnScroll(e))
+            return (
+                scrollDiv.removeEventListener('scroll', (e) => hideOnScroll(e))
+            )
         }
-    }, [])
+    }, [scrollDiv, hideOnScroll, props.page])
     return (
         <main className="main__wrapper" id='skillsPage'>
             <div className="full-screen skills-wrapper page-wrapper" id="top">
@@ -48,7 +77,9 @@ function Skills(props) {
                             <img src={parallelLine} alt="" className="mid-page_underline " />
                         </div>
                     </div>
-                    <div className="flex-row space-around ">
+                    <div className={`flex-row space-around 
+                        ${showCurrentProjects ? "enter--right load--slow-delay-0-5" : "close--slow-opacity"}
+                    `}>
 
                         <InfoCard
                             className=""
@@ -104,7 +135,8 @@ function Skills(props) {
 
 
                     </div>
-                </div>
+                </div><PageSplitter className="grid-position-1 grid-end z-index-mid background--yellow--midtone"
+                    page={page} />
                 <div className="mid-page_skills grid-1x1 overflow-x Skills__triangle" id="front-end-tech">
                     <div className="grid-position-1 page-center">
                         <div>
@@ -112,7 +144,9 @@ function Skills(props) {
                             <img src={parallelLine} alt="" className="mid-page_underline " />
                         </div>
 
-                        <div className="flex-row space-around ">
+                        <div className={`flex-row space-around 
+                        ${showCurrentProjects ? "enter--left load--slow-delay-1" : "close--slow-opacity"}
+                    `}>
                             <InfoCard
                                 className=""
                                 title="Operations"
@@ -136,6 +170,7 @@ function Skills(props) {
                         </div>
                     </div>
                 </div>
+
                 <div className="page-runout--red page-runout grid-1x1" id="recent-work">
                     {/* <img alt="" src={coding} className="vignette--skills vignette--small margin-3 only-mobile "></img> */}
                     <Menu img={true} />

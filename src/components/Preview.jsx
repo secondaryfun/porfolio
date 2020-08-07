@@ -19,7 +19,7 @@ function Preview(props) {
     }
 
     return (
-        <div className={`${props.className} ${!showElement ? "Preview__close" : "Preview__open"}`}
+        <div className={`Preview__animate ${props.className} ${!showElement ? "Preview__close" : "Preview__open"}`}
             onMouseEnter={loadElement}
             onMouseLeave={hideElement}
         >
