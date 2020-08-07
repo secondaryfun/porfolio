@@ -4,20 +4,17 @@
     width: 35rem;
     padding: 3rem;
 }
-.Preview-wrapper {
+.Preview__wrapper {
     background: rgba(0,0,0,.75);
-    
     color: #FFF3F3;
 }
-.Preview-wrapper h2, .Preview-wrapper > a {
+.Preview__title, .Preview__wrapper > a {
     color: #FFF3F3;
-}
-.Preview-wrapper h2 {
-    font-size: 3rem;
 }
 .Preview__title {
-    animation: fadeInRight 1s ease-out;
+    font-size: 3rem;
 }
+
 .Preview__nav-text{
     line-height: 7rem;
     vertical-align: middle;
@@ -31,7 +28,7 @@
 }
 
 @media screen and (min-width : 950px) {
-    .Preview-wrapper {
+    .Preview__wrapper {
         height: 30rem;
         width: 30rem;
     }
@@ -46,24 +43,40 @@
     }
 }
 
-.Preview__link {
-    opacity: 0;
-}
-.Preview__animate {
-    opacity: 0;
-}
-.Preview__animate:hover,
-.Preview__animate:hover .Preview__link {
-    opacity: 1;
-    animation: growFromCenterline .3s ease-in;
-}
 
+
+.Preview__wrapper {
+    transform: scaleY(0);
+    transition: all .5s ease-out;
+}
+.Preview__open {
+    opacity: 1;
+}
+.Preview__open .Preview__wrapper {
+    opacity: 1;
+    transform: scaleY(1);
+    animation: growFromCenterline .5s ease-out;
+}
+.Preview__close .Preview__wrapper {
+    transform: scaleY(0);
+    animation: shrinkFromCenterline .5s ease-out;
+}
 @keyframes growFromCenterline {
     100% {
         opacity: 1;
         transform: scaleY(1);
     }
     0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+@keyframes shrinkFromCenterline {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
         opacity: 0;
         transform: scaleY(0);
     }

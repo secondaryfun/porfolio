@@ -1,3 +1,9 @@
+.enter--left {
+    animation: moveInLeft .7s ease-out;
+}
+.enter--right {
+    animation: moveInRight .7s ease-out;
+}
 
 .fadeout--bottom {
     transform: translateX(-500rem);
@@ -53,26 +59,55 @@
         transform: translateY(3rem);
     }
 }
-    .btn::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 50rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
-    .btn:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
 
 
 
-    .button-pop:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
+.button-pop:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.opacity--0 {
+    opacity: 0;
+}
+.opacity--1 {
+    opacity: 1;
+}
+.load--slow-opacity {
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+.load--slow-delay-1-5 {
+    transition-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.load--slow-delay-2 {
+    transition-delay: 2s;
+    animation-delay: 2s;
+}
+.load--slow-delay-1 {
+    transition-delay: 1s;
+    animation-delay: 1s;
+}
+.load--slow-delay-0-5 {
+    transition-delay: .5s;
+    animation-delay: .5s;
+}
+/* .hover-opacity:hover {
+    opacity: 1;
+} */

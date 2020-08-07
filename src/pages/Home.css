@@ -3,6 +3,8 @@
 }
 .mid-page_home {
     background: #fccc05;
+    width: 100vw;
+    height: 80vh;
 }
 
 .page-runout--yellow {
@@ -21,6 +23,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endCo
     letter-spacing: -.7rem;
     line-height: 8rem;
     font-size: 8rem;
+    position: relative;
 }
 
 

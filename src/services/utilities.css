@@ -167,6 +167,9 @@ font-weight: 400;
 .background--yellow--dark {
     background: #fccc05;
 }
+.background--yellow--midtone {
+    background: #FDDB18;
+}
 .background--yellow {
     background: #FEE934;
 }
@@ -208,6 +211,7 @@ font-weight: 400;
     position: absolute;
     right: 100vw;
 }
+
 .pointer:hover {
     cursor: pointer;
 }

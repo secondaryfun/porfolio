@@ -1,0 +1,29 @@
+.Page-splitter__animated {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0% 100%  );
+
+    transition: clip-path 1s ease-out .5s;
+    
+    
+}
+
+.Page-splitter__animate {
+    /* outline: 1px red solid;
+    width: 100%;
+    height: 100%; */
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100% );
+    /* animation-fill-mode: backwards; */
+
+    /* animation: rotateIn 3s; */
+}
+
+@keyframes rotateIn {
+    0% {
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0  );
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 100%, 0 100% );
+
+    }
+}
