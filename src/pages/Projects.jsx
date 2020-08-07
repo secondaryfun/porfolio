@@ -7,16 +7,14 @@ import './Projects.css';
 import handleScroll from '../services/services.js'
 
 import NavBar from "../components/NavBar.jsx"
+import ArrowDownButton from "../components/ArrowDownButton.jsx"
+
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 import projects from "../assets/data/projects"
 import ScrollTop from "../components/ScrollTop.jsx"
 
-
-
-
-import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import { PageView, initGA } from '../components/Tracking';
 function Projects(props) {
@@ -40,9 +38,8 @@ function Projects(props) {
                     <div className="mid-page-callout oswald bold white margin-3">Personal Projects</div>
                     <p className="mid-page-text white left" >I am always doing that which I cannot do, in order that I may learn how to do it.  - Pablo Picasso</p>
                 </div>
-                <div className="down-arrow " onClick={() => handleScroll(page)}>
-                    <img src={downArrow} alt="" className="" />
-                </div>
+                <ArrowDownButton page={page} />
+
             </div>
             <ScrollTop {...props} btnIsBlack={false} page={page} />
             <div className="mid-page_projects padding-2">

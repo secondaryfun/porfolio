@@ -27,13 +27,9 @@ function Scrolltop(props) {
     }
 
     useEffect(() => {
-
         setScrollDiv(getScrollingDiv(props.page))
-
         if (scrollDiv) {
-
             scrollDiv.addEventListener('scroll', (e) => hideOnScroll(e))
-
             return (
                 scrollDiv.removeEventListener('scroll', (e) => hideOnScroll(e))
             )
@@ -53,5 +49,4 @@ export default Scrolltop;
 
 Scrolltop.defaultProps = {
     btnIsBlack: true,
-    backgroundColor: false
 };

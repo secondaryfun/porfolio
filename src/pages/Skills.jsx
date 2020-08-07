@@ -5,16 +5,13 @@ import './Skills.css';
 import handleScroll from '../services/services.js'
 
 import NavBar from "../components/NavBar.jsx"
+import ArrowDownButton from "../components/ArrowDownButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 import ScrollTop from "../components/ScrollTop.jsx"
 
-
-
-
 import skillsVignette from "../assets/images/characters/JavaScript frameworks-amico-yellow.svg"
-import downArrow from "../assets/images/icons/arrow-head-white.svg"
 import parallelLine from "../assets/images/icons/parallel-yellow.svg"
 import { PageView, initGA } from '../components/Tracking';
 function Skills(props) {
@@ -39,9 +36,8 @@ function Skills(props) {
                 <div className="vignette-wrapper">
                     <img src={skillsVignette} alt="Chris At Work" className=" vignette" />
                 </div>
-                <div className="down-arrow " onClick={() => handleScroll(page)}>
-                    <img src={downArrow} alt="" className="" />
-                </div>
+                <ArrowDownButton page={page} />
+
             </div>
             <ScrollTop {...props} btnIsBlack={false} page={page} />
             <div className="mid-page mid-page_skills">

@@ -1,0 +1,50 @@
+.ArrowDownButton__wrapper {
+    margin: 2rem auto;
+    cursor: pointer;
+    border-radius: .05rem;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.ArrowDownButton__arrow {
+    margin: 0 auto;
+    width: 60vw;
+}
+
+.ArrowDownButton__wrapper::after {
+    content: "";
+    display: inline-block;
+    height: 50vw;
+    width: 50vw;
+    height: 150%;
+    width: 150%;
+    border-radius: .05rem;
+    position: absolute;
+    top: -1.4rem;
+    left: -6.5rem;
+    z-index: -1;
+    transition: all .4s;
+    background: white;
+    transform: scaleX(.1) scaleY(.1);
+
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: circle(150%) */
+}
+
+@media screen and (min-width : 480px) {
+    .ArrowDownButton__arrow {
+        width: 40vw
+    }
+}
+    
+@media screen and (min-width : 950px) {
+    .ArrowDownButton__arrow {
+        width: 30vw
+    }
+}
+@media screen and (min-width : 1200px) {
+    .ArrowDownButton__arrow {
+        width: 20vw
+    }
+}

@@ -7,6 +7,7 @@ import '../services/animations.css';
 import handleScroll from '../services/services.js'
 import NavBar from "../components/NavBar.jsx"
 import ArrowButton from "../components/ArrowButton.jsx"
+import ArrowDownButton from "../components/ArrowDownButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import Preview from "../components/Preview.jsx"
@@ -17,7 +18,6 @@ import ScrollTop from "../components/ScrollTop.jsx"
 import homeVignette from "../assets/images/characters/Programming-pana-purple.svg"
 import onlineShopping from "../assets/images/characters/Online shopping-bro-purple.svg"
 import coding from "../assets/images/characters/Coding-bro-purple.svg"
-import downArrow from "../assets/images/icons/arrow-head-black.svg"
 import parallelLine from "../assets/images/icons/parallel-black.svg"
 import triangle from '../assets/images/backgrounds/background-bottom-1.svg'
 
@@ -48,9 +48,7 @@ export default function Home(props) {
                 <div className="vignette-wrapper">
                     <img src={homeVignette} alt="Chris At Work" className="home__vignette vignette" />
                 </div>
-                <div className="down-arrow pointer" onClick={() => handleScroll(page)}>
-                    <img src={downArrow} alt="" className="" />
-                </div>
+                <ArrowDownButton page={page} />
             </div>
             <ScrollTop {...props} btnIsBlack={true} page={page} />
             <div className="background--yellow--dark">

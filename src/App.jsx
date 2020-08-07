@@ -7,6 +7,7 @@ import { useRouteMatch } from 'react-router-dom';
 
 import './App.css';
 import './services/utilities.css';
+import './services/animations.css';
 
 import AwesomeSlider from "react-awesome-slider"
 import 'react-awesome-slider/dist/styles.css';

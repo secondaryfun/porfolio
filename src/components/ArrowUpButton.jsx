@@ -30,7 +30,7 @@ function ArrowUpButton(props) {
     }
 
     return (
-        <div className={`ArrowUpButton__wrapper flex-row ${background}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+        <div className={`ArrowUpButton__wrapper flex-row button-pop ${background}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
             <img src={arrowColor} alt="arrow" className="ArrowUpButton__arrow" />
         </div>
     );

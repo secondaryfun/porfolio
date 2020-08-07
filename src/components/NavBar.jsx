@@ -11,7 +11,6 @@ import logoBlack from "../assets/images/icons/logo-black.svg"
 import logoWhite from "../assets/images/icons/logo-white.svg"
 
 const NavBar = withNavigationContext((props) => {
-    const fullpage = props.fullpage
     const match = props.page
     let textColor, logo, hover, border
     if (props.color === 'white') {
@@ -26,10 +25,6 @@ const NavBar = withNavigationContext((props) => {
         border = 'border--black'
     }
 
-    const handleClick = (path) => {
-        fullpage.navigate(path)
-    }
-
     return (
         <nav className={`nav-wrapper flex-row space-between  ${props.className}`}>
             <Link to="/home" >
@@ -42,8 +37,8 @@ const NavBar = withNavigationContext((props) => {
                     `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/skills" >SKILLS</Link>
                 <Link className={`nav__link ${hover} ${match !== "projects" ? "" :
                     `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/projects" >PROJECTS</Link>
-                <div className={`nav__link ${hover} ${match !== "resume" ? "" :
-                    `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/resume" onClick={() => handleClick('/resume')} >RESUME</div>
+                <Link className={`nav__link ${hover} ${match !== "resume" ? "" :
+                    `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/resume"  >RESUME</Link>
             </div>
             <Menu backgroundColor={props.backgroundColor} color={props.color} className={"nav__logo"} />
 
