@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { useRouteMatch, Link } from 'react-router-dom';
 import './NavBar.css';
 import Menu from "../components/Menu.jsx"
+import {
+    Provider,
+    withNavigationContext,
+    withNavigationHandlers,
+} from "react-awesome-slider/dist/navigation";
 
 
 import logoBlack from "../assets/images/icons/logo-black.svg"
 import logoWhite from "../assets/images/icons/logo-white.svg"
 
-function NavBar(props) {
-    const match = useRouteMatch().path
-    console.log(match)
+const NavBar = withNavigationContext((props) => {
+    const fullpage = props.fullpage
+    const match = props.page
     let textColor, logo, hover, border
     if (props.color === 'white') {
         textColor = "#FFF3F3"
@@ -23,26 +28,31 @@ function NavBar(props) {
         border = 'border--black'
     }
 
+    const handleClick = (path) => {
+        fullpage.navigate(path)
+    }
+
     return (
-        <nav className={`nav-wrapper flex-row space-between sticky hide-on-small ${props.className}`}>
-            <Link to="/" >
+        <nav className={`nav-wrapper flex-row space-between  ${props.className}`}>
+            <Link to="/home" >
                 <img src={logo} alt="Christopher Birkenhagen" className="nav__logo" />
             </Link>
             <div className="nav__link-wrapper nav-bar-margins flex-row hide-on-small">
-                <Link className={`nav__link ${hover} ${match !== "/home" ? "" :
+                <Link className={`nav__link ${hover} ${match !== "home" ? "" :
                     `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/home" >HOME</Link>
-                <Link className={`nav__link ${hover} ${match !== "/skills" ? "" :
+                <Link className={`nav__link ${hover} ${match !== "skills" ? "" :
                     `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/skills" >SKILLS</Link>
-                <Link className={`nav__link ${hover} ${match !== "/projects" ? "" :
+                <Link className={`nav__link ${hover} ${match !== "projects" ? "" :
                     `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/projects" >PROJECTS</Link>
-                <Link className={`nav__link ${hover} ${match !== "/resume" ? "" :
-                    `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/resume" >RESUME</Link>
+                <div className={`nav__link ${hover} ${match !== "resume" ? "" :
+                    `Menu__link--underline ${border}`}`} style={{ color: textColor }} to="/resume" onClick={() => handleClick('/resume')} >RESUME</div>
             </div>
             <Menu backgroundColor={props.backgroundColor} color={props.color} className={"nav__logo"} />
 
         </nav>
     );
-}
+
+})
 
 export default NavBar;
 

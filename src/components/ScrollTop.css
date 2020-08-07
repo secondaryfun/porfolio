@@ -1,0 +1,84 @@
+.ScrollTop__wrapper {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 1000;
+}
+
+@media screen and (min-width : 1900px) {
+    .ScrollTop__wrapper {
+        right: 22%;
+    }
+}
+
+
+.fadeout--bottom {
+    transform: translateX(-500rem);
+    animation: moveOutBottom .5s ease-in;
+}
+.show--bottom {
+    transform: translateX(0);
+    animation: moveInBottom 1s ease-out;    
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+@keyframes moveOutBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
+    .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    .btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }

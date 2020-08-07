@@ -1,92 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Zoom from '@material-ui/core/Zoom';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
-// import CssBaseline from '@material-ui/core/CssBaseline';
-// import Box from '@material-ui/core/Box';
-// import Container from '@material-ui/core/Container';
-// import Fab from '@material-ui/core/Fab';
-// import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import './ScrollTop.css';
+import { useState, useEffect, useCallback } from 'react'
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        position: 'fixed',
-        bottom: theme.spacing(2),
-        right: theme.spacing(2),
-        zIndex: 1000,
+import ArrowUpButton from "../components/ArrowUpButton.jsx"
+import handleScroll, { getScrollingDiv } from '../services/services.js'
 
-    },
-}));
+function Scrolltop(props) {
+    const [showBtn, setShowBtn] = useState(false)
+    const [scrollDiv, setScrollDiv] = useState()
 
-export default function ScrollTop(props) {
-    const { children, window } = props;
-    const classes = useStyles();
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-        disableHysteresis: true,
-        threshold: 100,
-    });
+    const hideOnScroll = useCallback(
+        () => {
+            let navHeight = scrollDiv?.scrollTop
+            if (navHeight > window.innerHeight * .2) onBtn()
+            if (navHeight < window.innerHeight * .2) offBtn()
+        },
+        [scrollDiv],
+    )
 
-    const handleClick = (event) => {
-        const anchor = (event.target.ownerDocument || document).querySelector('#top');
+    const onBtn = () => {
+        setShowBtn(true)
+    }
 
-        if (anchor) {
-            anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const offBtn = () => {
+        setShowBtn(false)
+    }
+
+    useEffect(() => {
+
+        setScrollDiv(getScrollingDiv(props.page))
+
+        if (scrollDiv) {
+
+            scrollDiv.addEventListener('scroll', (e) => hideOnScroll(e))
+
+            return (
+                scrollDiv.removeEventListener('scroll', (e) => hideOnScroll(e))
+            )
         }
-    };
+    }, [scrollDiv, hideOnScroll, props.page])
 
     return (
-        <Zoom in={trigger}>
-            <div onClick={handleClick} role="presentation" className={`${classes.root}`}>
-                {children}
-            </div>
-        </Zoom>
+        <div className={`ScrollTop__wrapper ${showBtn ? "show--bottom" : 'fadeout--bottom'}`}
+            onClick={() => handleScroll(props.page, 'top')}
+        >
+            <ArrowUpButton />
+        </div >
     );
 }
 
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
+export default Scrolltop;
 
-// export function BackToTop(props) {
-//     return (
-//         <React.Fragment>
-//             <CssBaseline />
-//             <AppBar>
-//                 <Toolbar>
-//                     <Typography variant="h6">Scroll to see button</Typography>
-//                 </Toolbar>
-//             </AppBar>
-//             <Toolbar id="back-to-top-anchor" />
-//             <Container>
-//                 <Box my={2}>
-//                     {[...new Array(12)]
-//                         .map(
-//                             () => `Cras mattis consectetur purus sit amet fermentum.
-// Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-// Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-// Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-//                         )
-//                         .join('\n')}
-//                 </Box>
-//             </Container>
-//             <ScrollTop {...props}>
-//                 <Fab color="secondary" size="small" aria-label="scroll back to top">
-//                     <KeyboardArrowUpIcon />
-//                 </Fab>
-//             </ScrollTop>
-//         </React.Fragment>
-//     );
-// }
+Scrolltop.defaultProps = {
+    btnIsBlack: true,
+    backgroundColor: false
+};
