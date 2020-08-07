@@ -1,11 +1,12 @@
-.Preview__link {
-    padding: 3rem;;
+.Preview__animate {
     z-index: 100;
+    height: 35rem;
+    width: 35rem;
+    padding: 3rem;
 }
 .Preview-wrapper {
     background: rgba(0,0,0,.75);
-    height: 20rem;
-    width: 20rem;
+    
     color: #FFF3F3;
 }
 .Preview-wrapper h2, .Preview-wrapper > a {
@@ -45,10 +46,11 @@
     }
 }
 
-.Preview__link {
+.Preview__animate {
     opacity: 0;
 }
-.Preview__link:hover {
+.Preview__animate:hover,
+.Preview__animate:hover .Preview__link {
     opacity: 1;
     animation: growFromCenterline .3s ease-in;
 }
