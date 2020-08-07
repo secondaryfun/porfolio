@@ -10,7 +10,6 @@ import ArrowButton from "../components/ArrowButton.jsx"
 import SocialMedia from "../components/SocialMedia.jsx"
 import Menu from "../components/Menu.jsx"
 import Preview from "../components/Preview.jsx"
-import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import projects from "../assets/data/projects"
 import ScrollTop from "../components/ScrollTop.jsx"
 

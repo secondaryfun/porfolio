@@ -1,6 +1,6 @@
 import React from 'react';
 import './ScrollTop.css';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 import ArrowUpButton from "../components/ArrowUpButton.jsx"
 import handleScroll, { getScrollingDiv } from '../services/services.js'
@@ -8,37 +8,15 @@ import handleScroll, { getScrollingDiv } from '../services/services.js'
 function Scrolltop(props) {
     const [showBtn, setShowBtn] = useState(false)
     const [scrollDiv, setScrollDiv] = useState()
-    const [btnIsBlack, setBtnIsBlack] = useState(props.btnIsBlack)
 
-    let arrowIsBlack
-    useEffect(() => {
-        if (btnIsBlack === false) {
-            arrowIsBlack = false
-        } else {
-            arrowIsBlack = true
-        }
-
-
-        setScrollDiv(getScrollingDiv(props.page))
-
-        console.log(scrollDiv)
-        if (scrollDiv) {
-
-            scrollDiv.addEventListener('scroll', (e) => hideOnScroll(e))
-            console.log('listening to scroll')
-
-            return (
-                scrollDiv.removeEventListener('scroll', (e) => hideOnScroll(e))
-            )
-        }
-    }, [btnIsBlack, scrollDiv])
-
-    const hideOnScroll = (e) => {
-        let navHeight = scrollDiv.scrollTop
-        console.log(navHeight + " " + window.innerHeight * .2)
-        if (navHeight > window.innerHeight * .2) onBtn()
-        if (navHeight < window.innerHeight * .2) offBtn()
-    }
+    const hideOnScroll = useCallback(
+        () => {
+            let navHeight = scrollDiv?.scrollTop
+            if (navHeight > window.innerHeight * .2) onBtn()
+            if (navHeight < window.innerHeight * .2) offBtn()
+        },
+        [scrollDiv],
+    )
 
     const onBtn = () => {
         setShowBtn(true)
@@ -48,19 +26,25 @@ function Scrolltop(props) {
         setShowBtn(false)
     }
 
-    const handleMouseEnter = () => {
-        setBtnIsBlack(!btnIsBlack)
-    }
-    const handleMouseLeave = () => {
-        setBtnIsBlack(!btnIsBlack)
-    }
+    useEffect(() => {
 
+        setScrollDiv(getScrollingDiv(props.page))
+
+        if (scrollDiv) {
+
+            scrollDiv.addEventListener('scroll', (e) => hideOnScroll(e))
+
+            return (
+                scrollDiv.removeEventListener('scroll', (e) => hideOnScroll(e))
+            )
+        }
+    }, [scrollDiv, hideOnScroll, props.page])
 
     return (
-        <div className={`ScrollTop__wrapper ${showBtn ? "" : 'hide--right'}`}
+        <div className={`ScrollTop__wrapper ${showBtn ? "show--bottom" : 'fadeout--bottom'}`}
             onClick={() => handleScroll(props.page, 'top')}
         >
-            <ArrowUpButton arrowIsBlack={arrowIsBlack} />
+            <ArrowUpButton />
         </div >
     );
 }

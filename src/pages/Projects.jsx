@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react'
 
 
@@ -12,7 +12,6 @@ import Menu from "../components/Menu.jsx"
 import InfoCard from "../components/InfoCard.jsx"
 import projects from "../assets/data/projects"
 import ScrollTop from "../components/ScrollTop.jsx"
-import ArrowUpButton from "../components/ArrowUpButton.jsx"
 
 
 

@@ -3,10 +3,34 @@
     height: 4rem;
     margin: 2rem auto;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .05rem;
+    position: relative;
 }
 
 .ArrowUpButton__arrow {
     margin: 0 auto;
     width: 50%;
+}
+
+.ArrowUpButton__wrapper::after {
+    content: "";
+    display: inline-block;
+    height: 150%;
+    width: 150%;
+    border-radius: .05rem;
+    position: absolute;
+    top: -1rem;
+    left: -2.5rem;
+    z-index: -1;
+    transition: all .4s;
+    background: white;
+    transform: scaleX(.1) scaleY(.1);
+    animation-duration: .5s;
+    
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: circle(150%) */
+}
+.ArrowUpButton__wrapper:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
