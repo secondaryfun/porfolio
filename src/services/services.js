@@ -5,7 +5,6 @@ export default function handleScroll(page, target) {
         behavior: 'smooth',
     }
     const scrollDivs = document.querySelectorAll('.slide-page')
-    let match = null
     scrollDivs.forEach((div, i) => {
         const node = div.childNodes[0].id
         const pg = page + "Page"

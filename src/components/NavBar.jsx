@@ -1,11 +1,9 @@
 import React from 'react';
-import { useRouteMatch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 import Menu from "../components/Menu.jsx"
 import {
-    Provider,
     withNavigationContext,
-    withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
 
 

@@ -32,12 +32,11 @@ const Slider = (startPage = 0) => {
 	// console.log(starPage)
 	return (
 		<NavigationSlider
-			className="awesome-slider"
+			className="page-slider"
 			animation="cubeAnimation"
 			cssModule={[animationStyles]}
 			bullets={false}
 			fillParent={true}
-			className="page-slider"
 			infinite={true}
 			startup={true}
 			mobileTouch={true}
