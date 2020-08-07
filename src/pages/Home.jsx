@@ -79,10 +79,10 @@ export default function Home(props) {
                     <img alt="" src={coding} className="vignette--small 
                     grid-position-1 grid-end margin-3 hide-on-small "></img>
                     <Preview title={projects[0].title} project={projects[0]} id="preview-1"
-                        className={"grid-position-1 z-index-top grid-end margin-3 hide-on-small "}
+                        className={"grid-position-1 z-index-top grid-end hide-on-small "}
                     />
                     <Preview title={projects[1].title} project={projects[1]} id="preview-2"
-                        className={"grid-position-1 z-index-top margin-3 hide-on-small auto-size"}
+                        className={"grid-position-1 z-index-top grid-start hide-on-small"}
                     />
                 </div>
                 <div className="page-runout--yellow page-runout grid-1x1" id="recent-work">

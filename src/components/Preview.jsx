@@ -7,18 +7,24 @@ import arrow from "../assets/images/icons/arrow-button-white.svg"
 function Preview(props) {
     const project = props.project
     return (
-        <div className={`Preview-wrapper flex-column space-around ${props.className}`}>
-            <h2 className="oswald">{props.title}</h2>
-            <Link to={
-                {
-                    pathname: `/project-detail`,
-                    state: { project }
-                }
-            } className="open-sans headline Preview__link">
-                view project
-                <img src={arrow} alt="arrow" className="Preview__img" />
-            </Link>
-        </div>
+        <Link to={
+            {
+                pathname: `/project-detail`,
+                state: { project }
+            }
+        }
+            className={`open-sans headline Preview__link ${props.className}`}
+        >
+            <div className={`Preview-wrapper flex-column space-around `}>
+                <h2 className="oswald">{props.title}</h2>
+                <p>
+                    <span className="Preview__nav-text white">
+                        view project
+                </span>
+                    <img src={arrow} alt="arrow" className="Preview__img" />
+                </p>
+            </div>
+        </Link >
     );
 }
 

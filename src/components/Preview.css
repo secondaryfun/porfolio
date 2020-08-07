@@ -1,3 +1,7 @@
+.Preview__link {
+    padding: 3rem;;
+    z-index: 100;
+}
 .Preview-wrapper {
     background: rgba(0,0,0,.75);
     height: 20rem;
@@ -10,16 +14,21 @@
 .Preview-wrapper h2 {
     font-size: 3rem;
 }
-.Preview__link {
+.Preview__title {
+    animation: fadeInRight 1s ease-out;
+}
+.Preview__nav-text{
     line-height: 7rem;
     vertical-align: middle;
+    animation: fadeInLeft 1s ease-out;
 }
-.Preview__link:hover {
+.Preview__nav-text:hover {
     font-weight: 700;
 }
 .Preview__img {
     height: 1rem;
 }
+
 @media screen and (min-width : 950px) {
     .Preview-wrapper {
         height: 30rem;
@@ -33,5 +42,24 @@
     .vignette--small {
         height: 30rem;
         width: 30rem;
+    }
+}
+
+.Preview__link {
+    opacity: 0;
+}
+.Preview__link:hover {
+    opacity: 1;
+    animation: growFromCenterline .3s ease-in;
+}
+
+@keyframes growFromCenterline {
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
     }
 }

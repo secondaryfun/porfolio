@@ -82,6 +82,10 @@ font-weight: 400;
     align-self: flex-end;
     justify-self: flex-end;
 }
+.grid-start {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
 .grid-bottom {
     align-self: flex-end;
     justify-self: center;
