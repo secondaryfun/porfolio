@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  /* outline: 1px solid greenyellow; */
 }
 #root {
   height: 100vh;
