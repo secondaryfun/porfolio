@@ -36,7 +36,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fddb18",endCo
 }
 @media screen and (min-width : 1200px) {
     .mid-page_home__title {
-        font-size: 18rem;
+        font-size: 17rem;
         line-height: 15rem;
     }
 }
